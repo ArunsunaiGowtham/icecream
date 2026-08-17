@@ -579,15 +579,7 @@
       bodyHtml += '  <button aria-label="Share by email" class="social-circle" type="button"><i class="bi bi-envelope"></i></button>';
       bodyHtml += '</div>';
 
-      bodyHtml += '<div class="d-flex flex-wrap align-items-center gap-2 mt-4">';
-      bodyHtml += '  <span class="font-display fw-bold me-1">Popular tags:</span>';
-      if (post.tags) {
-        post.tags.forEach(function (tag) {
-          var tagSlug = String(tag || "").toLowerCase().trim().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-          bodyHtml += '  <a class="filter-pill" href="blog.html?tag=' + encodeURIComponent(tagSlug) + '">' + tag + '</a>';
-        });
-      }
-      bodyHtml += '</div>';
+
 
       /* Prev / Next Navigation */
       var prevPost = post.prevSlug ? BLOG_POSTS[post.prevSlug] : null;
