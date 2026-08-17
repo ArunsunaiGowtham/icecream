@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Sugar &amp; Scoop - Recipes, news and guides from our ice cream parlour. Chocolate truffle ice cream, chewy cookies, layer cakes and more." name="description"/>
+<title>Sugar &amp; Scoop - Blog - Recipes, News &amp; Guides</title>
+<link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/fonts/fonts.css" rel="stylesheet"/>
+<link href="assets/css/bootstrap.min.css" id="mainBootstrapCss" rel="stylesheet"/>
+  <script>(function(){try{var d=localStorage.getItem("si_dir")||localStorage.getItem("layoutDirection");if(d==="rtl"){document.documentElement.setAttribute("dir","rtl");document.documentElement.setAttribute("lang","ar");var l=document.getElementById("mainBootstrapCss");if(l)l.setAttribute("href","assets/css/bootstrap.rtl.min.css");}}catch(e){}})();</script>
+<!-- RTL: to enable Arabic/Hebrew layouts, replace bootstrap.min.css with bootstrap.rtl.min.css and add dir="rtl" lang="ar" to the <html> tag. -->
+<link href="assets/css/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="https://www.sugarandscoop.com/blog.html" rel="canonical"/>
+<!-- Open Graph / Social -->
+<meta content="website" property="og:type"/>
+<meta content="Sugar &amp; Scoop" property="og:site_name"/>
+<meta content="Sugar &amp; Scoop - Blog - Recipes, News &amp; Guides" property="og:title"/>
+<meta content="Sugar &amp; Scoop - Recipes, news and guides from our ice cream parlour. Chocolate truffle ice cream, chewy cookies, layer cakes and more." property="og:description"/>
+<meta content="https://www.sugarandscoop.com/assets/images/blog/blog-truffle.jpg" property="og:image"/>
+<meta content="https://www.sugarandscoop.com/blog.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Sugar &amp; Scoop - Blog - Recipes, News &amp; Guides" name="twitter:title"/>
+<meta content="Sugar &amp; Scoop - Recipes, news and guides from our ice cream parlour. Chocolate truffle ice cream, chewy cookies, layer cakes and more." name="twitter:description"/>
+<meta content="https://www.sugarandscoop.com/assets/images/blog/blog-truffle.jpg" name="twitter:image"/>
+</head>
+<body>
+<!-- ================= Header ================= -->
+<header class="site-header">
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+<a class="brand-logo" href="index.html">
+<span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+          Sugar &amp; <span class="si-text-gradient">Scoop</span>
+</a>
+<div class="header-actions d-flex align-items-center order-lg-last ms-lg-3">
+<button aria-label="Toggle dark mode" class="nav-icon-btn" data-theme-switch="" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+<button aria-label="Switch to right-to-left layout" class="nav-icon-btn d-none d-lg-inline-flex" data-dir-switch="" type="button"><i class="bi bi-text-right"></i></button>
+<button aria-label="Open menu" class="nav-icon-btn d-lg-none" data-bs-target="#mobileMenu" data-bs-toggle="offcanvas" type="button"><i class="bi bi-list"></i></button>
+<a class="btn btn-sm btn-grad nav-order-btn" href="menu.html">Order Now</a>
+<button aria-label="Open cart" class="nav-icon-btn" data-bs-target="#cartDrawer" data-bs-toggle="offcanvas" type="button">
+<i class="bi bi-bag-heart"></i>
+<span class="badge-count" data-cart-count="" style="display:none">0</span>
+</button>
+</div><div class="collapse navbar-collapse justify-content-center" id="mainNav">
+<ul class="navbar-nav">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Home</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="index.html">Home 1</a></li>
+<li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+<li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<!-- ================= Mobile menu ================= -->
+<div aria-labelledby="mobileMenuLabel" class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1">
+<div class="offcanvas-header">
+<a class="brand-logo" href="index.html">
+<span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+        Sugar &amp; <span class="si-text-gradient">Scoop</span>
+</a>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<ul class="nav flex-column gap-1">
+<li class="nav-item"><a class="nav-link" href="index.html">Home 1</a></li>
+<li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="menu.html">Full Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="ice-cream.html">Ice Cream</a></li>
+<li class="nav-item"><a class="nav-link" href="sundaes.html">Sundaes</a></li>
+<li class="nav-item"><a class="nav-link" href="waffles.html">Waffles</a></li>
+<li class="nav-item"><a class="nav-link" href="crepes.html">Crepes</a></li>
+<li class="nav-item"><a class="nav-link" href="milkshakes.html">Milkshakes</a></li>
+<li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+<li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+<div class="mt-3 pt-2"><a class="btn btn-grad w-100" href="menu.html">Order Now</a></div>
+</div>
+</div>
+<!-- ================= Cart drawer ================= -->
+<div aria-labelledby="cartDrawerLabel" class="offcanvas offcanvas-end" id="cartDrawer" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title font-display" id="cartDrawerLabel">Your Cart</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body d-flex flex-column">
+<div class="flex-grow-1" data-cart-items=""></div>
+<div class="text-center py-4" data-cart-empty="">
+<i class="bi bi-emoji-frown" style="font-size:3rem;color:var(--si-muted)"></i>
+<p class="mt-2 mb-3 text-muted-soft">Your cart is empty. Sweet treats await!</p>
+<a class="btn btn-grad" href="menu.html">Browse Menu</a>
+</div>
+<hr/>
+<div class="d-flex justify-content-between align-items-center mb-3">
+<span class="font-display fw-bold">Total</span>
+<span class="product-price" data-cart-total="">$0</span>
+</div>
+<a class="btn btn-grad w-100" href="checkout.html">Checkout</a>
+</div>
+</div>
+<!-- ================= Page header ================= -->
+<section class="page-header page-header-blog">
+<div class="container">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+<li aria-current="page" class="breadcrumb-item active">Blog</li>
+</ol>
+</nav>
+<h1 class="display-4 mt-2 mb-2">Sweet Reads &amp; Recipes</h1>
+<p class="mb-0" style="color:rgba(255,255,255,.75);max-width:560px">Recipes, news and guides straight from the Sugar &amp; Scoop kitchen.</p>
+</div>
+</section>
+<!-- ================= Blog grid ================= -->
+<section class="si-section" id="blog">
+<div class="container">
+<div class="blog-toolbar">
+<div class="blog-toolbar-filters">
+<div aria-label="Blog filters" class="filter-pills" role="group">
+<button class="filter-pill active" data-blog-filter="all" type="button">All</button>
+<button class="filter-pill" data-blog-filter="recipe" type="button">Recipes</button>
+<button class="filter-pill" data-blog-filter="news" type="button">News</button>
+<button class="filter-pill" data-blog-filter="guide" type="button">Guides</button>
+<button class="filter-pill" data-blog-filter="events" type="button">Events</button>
+</div>
+</div>
+<div class="blog-search-wrap">
+<label class="visually-hidden" for="blogSearch">Search articles</label>
+<input aria-label="Search articles" class="form-control blog-search" data-blog-search="" id="blogSearch" placeholder="Search articles..." type="search"/>
+</div>
+</div>
+<div class="blog-grid" id="blogGrid">
+<div class="blog-grid-item"><article class="blog-card h-100" data-blog-category="events" data-blog-id="summer-scoop-fest" data-blog-searchable="summer scoop fest is coming events news ice cream new york live churn offs secret flavour voting free sample cones dessert lane marcus johnson" data-blog-slug="summer-scoop-fest" data-blog-tags="events news ice-cream new-york">
+<div class="blog-media">
+<a aria-label="Read Summer Scoop Fest Is Coming" class="blog-media-link" href="blog-details-scoop-fest.html"><img alt="Sugar and Scoop Summer Scoop Fest celebration" loading="lazy" src="assets/images/blog/blog-summer-scoop-fest.jpg"/></a>
+<span class="blog-cat">Events</span>
+</div>
+<div class="blog-body">
+<div class="blog-meta">
+<span><i class="bi bi-calendar3"></i> August 10, 2026</span>
+<span><i class="bi bi-clock"></i> 4 min read</span>
+</div>
+<h3 class="blog-title"><a href="blog-details-scoop-fest.html">Summer Scoop Fest Is Coming</a></h3>
+<p class="mb-0 text-muted-soft">A weekend of live churn-offs, secret flavour voting and free sample cones at 123 Dessert Lane. Here is everything you need to know about our biggest event of the year — and how to grab early-bird tickets.</p>
+<a class="btn btn-sm btn-grad align-self-start mt-auto" href="blog-details-scoop-fest.html">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</article>
+</div>
+<div class="blog-grid-item"><article class="blog-card h-100" data-blog-category="recipe" data-blog-id="chocolate-truffle-ice-cream" data-blog-searchable="how we make our chocolate truffle ice cream recipe chocolate ice cream guides guide single origin cocoa custard scoop marcus johnson" data-blog-slug="how-we-make-our-chocolate-truffle-ice-cream" data-blog-tags="recipe ice-cream chocolate guides guide">
+<div class="blog-media">
+<a aria-label="Read How We Make Our Chocolate Truffle Ice Cream" class="blog-media-link" href="blog-details.html"><img alt="Chocolate truffle ice cream scoop being churned" loading="lazy" src="assets/images/blog/blog-truffle.jpg"/></a>
+<span class="blog-cat">Recipe</span>
+</div>
+<div class="blog-body">
+<div class="blog-meta">
+<span><i class="bi bi-calendar3"></i> June 12, 2026</span>
+<span><i class="bi bi-clock"></i> 6 min read</span>
+</div>
+<h3 class="blog-title"><a href="blog-details.html">How We Make Our Chocolate Truffle Ice Cream</a></h3>
+<p class="mb-0 text-muted-soft">From single-origin cocoa to slow-churned custard — the full story behind our signature truffle scoop and why no two batches taste the same.</p>
+<a class="btn btn-sm btn-grad-soft align-self-start mt-auto" href="blog-details.html">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</article>
+</div>
+<div class="blog-grid-item"><article class="blog-card h-100" data-blog-category="news" data-blog-id="donut-sundaes-are-back" data-blog-searchable="donut sundaes are back news sundaes donuts ice cream menu glazed donuts vanilla soft serve fudge daniel reyes" data-blog-slug="donut-sundaes-are-back" data-blog-tags="news sundaes donuts ice-cream menu">
+<div class="blog-media">
+<a aria-label="Read Donut Sundaes Are Back" class="blog-media-link" href="blog-details-donut-sundaes.html"><img alt="Donut sundae topped with chocolate sauce" loading="lazy" src="assets/images/blog/blog-donut.jpg"/></a>
+<span class="blog-cat">News</span>
+</div>
+<div class="blog-body">
+<div class="blog-meta">
+<span><i class="bi bi-calendar3"></i> July 2, 2026</span>
+<span><i class="bi bi-clock"></i> 3 min read</span>
+</div>
+<h3 class="blog-title"><a href="blog-details-donut-sundaes.html">Donut Sundaes Are Back</a></h3>
+<p class="mb-0 text-muted-soft">Warm glazed donuts, cold vanilla soft serve and a generous pour of fudge — our most-requested sundae returns to the menu this Friday.</p>
+<a class="btn btn-sm btn-grad-soft align-self-start mt-auto" href="blog-details-donut-sundaes.html">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</article>
+</div>
+<div class="blog-grid-item"><article class="blog-card h-100" data-blog-category="guide" data-blog-id="secrets-to-perfectly-chewy-cookies" data-blog-searchable="secrets to perfectly chewy cookies guide cookies chewy baking chocolate brown butter oven ava martinez" data-blog-slug="secrets-to-perfectly-chewy-cookies" data-blog-tags="guide cookies chewy baking chocolate">
+<div class="blog-media">
+<a aria-label="Read Secrets to Perfectly Chewy Cookies" class="blog-media-link" href="blog-details-cookies.html"><img alt="Stack of perfectly chewy cookies" loading="lazy" src="assets/images/blog/blog-cookies.jpg"/></a>
+<span class="blog-cat">Guide</span>
+</div>
+<div class="blog-body">
+<div class="blog-meta">
+<span><i class="bi bi-calendar3"></i> May 28, 2026</span>
+<span><i class="bi bi-clock"></i> 5 min read</span>
+</div>
+<h3 class="blog-title"><a href="blog-details-cookies.html">Secrets to Perfectly Chewy Cookies</a></h3>
+<p class="mb-0 text-muted-soft">Brown butter, a long rest and the golden minute in the oven — the three habits that changed our cookie game for good.</p>
+<a class="btn btn-sm btn-grad-soft align-self-start mt-auto" href="blog-details-cookies.html">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</article>
+</div>
+<div class="blog-grid-item"><article class="blog-card h-100" data-blog-category="recipe" data-blog-id="baking-the-perfect-layer-cake" data-blog-searchable="baking the perfect layer cake recipe layer cake baking chocolate desserts level layers crumb coat priya nair" data-blog-slug="baking-the-perfect-layer-cake" data-blog-tags="recipe layer-cake baking chocolate desserts">
+<div class="blog-media">
+<a aria-label="Read Baking the Perfect Layer Cake" class="blog-media-link" href="blog-details-layer-cake.html"><img alt="Perfectly layered chocolate cake with frosting" loading="lazy" src="assets/images/blog/blog-cake.jpg"/></a>
+<span class="blog-cat">Recipe</span>
+</div>
+<div class="blog-body">
+<div class="blog-meta">
+<span><i class="bi bi-calendar3"></i> June 20, 2026</span>
+<span><i class="bi bi-clock"></i> 7 min read</span>
+</div>
+<h3 class="blog-title"><a href="blog-details-layer-cake.html">Baking the Perfect Layer Cake</a></h3>
+<p class="mb-0 text-muted-soft">Level layers, a chilled crumb coat and one very patient baker — our guide to a bakery-smooth finish at home.</p>
+<a class="btn btn-sm btn-grad-soft align-self-start mt-auto" href="blog-details-layer-cake.html">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</article>
+</div>
+<div class="blog-grid-item"><article class="blog-card h-100" data-blog-category="recipe" data-blog-id="chocolate-covered-strawberries-in-10-minutes" data-blog-searchable="chocolate covered strawberries in 10 minutes recipe chocolate strawberries 10 minutes quick desserts tempering maya chen" data-blog-slug="chocolate-covered-strawberries-in-10-minutes" data-blog-tags="recipe chocolate strawberries 10-minutes quick-desserts">
+<div class="blog-media">
+<a aria-label="Read Chocolate-Covered Strawberries in 10 Minutes" class="blog-media-link" href="blog-details-strawberries.html"><img alt="Chocolate covered strawberries on a tray" loading="lazy" src="assets/images/blog/blog-chocostraw.jpg"/></a>
+<span class="blog-cat">Recipe</span>
+</div>
+<div class="blog-body">
+<div class="blog-meta">
+<span><i class="bi bi-calendar3"></i> July 18, 2026</span>
+<span><i class="bi bi-clock"></i> 4 min read</span>
+</div>
+<h3 class="blog-title"><a href="blog-details-strawberries.html">Chocolate-Covered Strawberries in 10 Minutes</a></h3>
+<p class="mb-0 text-muted-soft">Two ingredients, one tempering trick and a tray of glossy berries ready for gifting — or keeping all to yourself.</p>
+<a class="btn btn-sm btn-grad-soft align-self-start mt-auto" href="blog-details-strawberries.html">Read More <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</article>
+</div>
+<div class="blog-empty-state col-12 text-center py-5" id="blogEmptyState" style="display:none;grid-column:1/-1;">
+<div class="mx-auto" style="max-width:460px">
+<div class="mb-3" style="font-size:3.5rem;color:var(--si-pink)"><i class="bi bi-journal-x"></i></div>
+<h3 class="font-display mb-2">No Articles Found</h3>
+<p class="text-muted-soft mb-4" id="blogEmptyMessage">We couldn't find any articles matching your selected tag or search. Try choosing another tag or reset to see all articles.</p>
+<button class="btn btn-grad" id="blogResetBtn" type="button"><i class="bi bi-arrow-counterclockwise me-1"></i>View All Articles</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Newsletter CTA ================= -->
+<section class="si-section pt-0" id="newsletter">
+<div class="container">
+<div class="cta-banner">
+<div class="row align-items-center g-4 position-relative" style="z-index:2">
+<div class="col-lg-6">
+<h3 class="mb-2">Get 10% Off Your First Order</h3>
+<p class="mb-0 opacity-75">Join the Scoop Club for secret flavours, member-only deals and a free topping every month.</p>
+</div>
+<div class="col-lg-6">
+<form class="newsletter-form d-flex flex-column flex-sm-row gap-2" data-success-message="Welcome to the Scoop Club! Check your inbox for your 10% code." data-validate="">
+<input aria-label="Email address" class="form-control flex-grow-1" placeholder="Your email address" required="" type="email"/>
+<button class="btn btn-lg" style="background:#fff;color:#ff5d8f;font-weight:700" type="submit">Subscribe <i class="bi bi-send ms-1"></i></button>
+</form>
+<small class="d-block mt-2 opacity-75"><i class="bi bi-shield-lock"></i> No spam. Unsubscribe anytime.</small>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-column footer-brand-column">
+        <a class="brand-logo footer-brand-logo" href="index.html">
+          <span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+          Sugar &amp; <span class="si-text-gradient">Scoop</span>
+        </a>
+        <p class="footer-description">Handcrafted ice cream, sundaes, waffles, crepes and shakes made fresh daily with real ingredients and real love.</p>
+        <div class="footer-socials" aria-label="Social media">
+          <a aria-label="YouTube (opens in new tab)" class="social-circle" href="https://youtube.com/@sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a aria-label="X / Twitter (opens in new tab)" class="social-circle" href="https://x.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          <a aria-label="Instagram (opens in new tab)" class="social-circle" href="https://instagram.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a aria-label="Facebook (opens in new tab)" class="social-circle" href="https://facebook.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h5>Quick Links</h5>
+        <nav class="footer-links" aria-label="Quick Links">
+          <a class="footer-link" href="about.html">About Us</a>
+          <a class="footer-link" href="menu.html">Services</a>
+          <a class="footer-link" href="pricing.html">Pricing</a>
+          <a class="footer-link" href="blog.html">Blog</a>
+          <a class="footer-link" href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h5>Our Menu</h5>
+        <nav class="footer-links" aria-label="Our Menu">
+          <a class="footer-link" href="ice-cream.html">Ice Cream</a>
+          <a class="footer-link" href="sundaes.html">Sundaes</a>
+          <a class="footer-link" href="waffles.html">Waffles</a>
+          <a class="footer-link" href="crepes.html">Crepes</a>
+          <a class="footer-link" href="milkshakes.html">Milkshakes</a>
+        </nav>
+      </div>
+
+      <div class="footer-column footer-contact-column">
+        <h5>Get In Touch</h5>
+        <ul class="info-list footer-contact-list mb-3">
+          <li>
+            <span class="info-ic"><i class="bi bi-geo-alt"></i></span>
+            <div><strong class="font-display d-block">Our Address</strong><span>123 Dessert Lane, 5th Avenue, New York, NY 10001</span></div>
+          </li>
+          <li>
+            <span class="info-ic"><i class="bi bi-telephone"></i></span>
+            <div><strong class="font-display d-block">Call Us</strong><span>+1 (555) 234-8765</span></div>
+          </li>
+          <li>
+            <span class="info-ic"><i class="bi bi-envelope"></i></span>
+            <div><strong class="font-display d-block">Email Us</strong><span>hello@sugarandscoop.com</span></div>
+          </li>
+        </ul>
+        <h6 class="footer-subheading font-display mt-3 mb-2">Newsletter</h6>
+        <form class="footer-newsletter-form newsletter-form d-flex gap-2" data-success-message="Thank you for subscribing to Sugar &amp; Scoop!" data-validate="">
+          <input aria-label="Your email address" class="form-control form-control-sm" placeholder="Email address" required="" type="email"/>
+          <button class="btn btn-grad btn-sm px-3" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">&copy; 2026 <strong class="font-display">Sugar &amp; Scoop</strong>. All rights reserved.</div>
+      <div class="footer-legal">
+        <a class="text-muted-soft" data-bs-target="#privacyModal" data-bs-toggle="modal" href="#">Privacy Policy</a>
+        <a class="text-muted-soft" data-bs-target="#termsModal" data-bs-toggle="modal" href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ================= Privacy modal ================= -->
+<div aria-hidden="true" class="modal fade" id="privacyModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-scrollable">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title font-display">Privacy Policy</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p class="small text-muted-soft">Last updated: January 2026</p>
+<p>At Sugar &amp; Scoop we respect your privacy. This policy explains what we collect and how we use it.</p>
+<h6 class="font-display mt-3">Information we collect</h6>
+<p class="text-muted-soft small">We collect the information you give us when ordering, subscribing to our newsletter or contacting us - such as your name, email address, delivery address and order history.</p>
+<h6 class="font-display mt-3">How we use it</h6>
+<p class="text-muted-soft small">We use your information to process orders, deliver desserts, send offers you have opted into, and improve our services. We never sell your data to third parties.</p>
+<h6 class="font-display mt-3">Cookies</h6>
+<p class="text-muted-soft small">We use essential cookies to keep the cart and theme preferences working. Analytics cookies are only used with your consent.</p>
+<h6 class="font-display mt-3">Contact</h6>
+<p class="text-muted-soft small">For any privacy questions, email privacy@sugarandscoop.com or write to 123 Dessert Lane, New York, NY 10001.</p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-grad" data-bs-dismiss="modal" type="button">Got it</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= Terms modal ================= -->
+<div aria-hidden="true" class="modal fade" id="termsModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-scrollable">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title font-display">Terms &amp; Conditions</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p class="small text-muted-soft">Last updated: January 2026</p>
+<h6 class="font-display mt-3">Orders</h6>
+<p class="text-muted-soft small">All orders are subject to availability. Prices are shown in USD and include applicable taxes unless stated otherwise.</p>
+<h6 class="font-display mt-3">Delivery</h6>
+<p class="text-muted-soft small">We deliver within the city in insulated packaging. Orders over $25 qualify for free delivery. Delivery times are estimates and may vary in peak season.</p>
+<h6 class="font-display mt-3">Allergens</h6>
+<p class="text-muted-soft small">Our parlour handles dairy, nuts, gluten and soy. Please tell our team about any allergies before ordering. Products may contain allergens.</p>
+<h6 class="font-display mt-3">Returns</h6>
+<p class="text-muted-soft small">As our products are perishable, refunds are only offered for incorrect or damaged orders reported within 2 hours of delivery.</p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-grad" data-bs-dismiss="modal" type="button">Got it</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= Toast container ================= -->
+<div class="toast-container position-fixed top-0 end-0 p-3"></div>
+<!-- ================= Back to top ================= -->
+<button aria-label="Back to top" class="back-to-top" type="button"><i class="bi bi-arrow-up"></i></button>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

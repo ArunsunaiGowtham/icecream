@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sugar &amp; Scoop HTML template documentation - file structure, customization, JS hooks, data attributes, forms, cart and more.">
+  <title>Documentation - Sugar &amp; Scoop HTML Template</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="stylesheet" href="../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <!-- RTL: to enable Arabic/Hebrew layouts, replace bootstrap.min.css with bootstrap.rtl.min.css and add dir="rtl" lang="ar" to the <html> tag. -->
+  <link rel="stylesheet" href="../assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="brand-logo" href="../index.html">
+          <span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+          Sugar &amp; <span class="si-text-gradient">Scoop</span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2 order-lg-last ms-lg-3">
+          <button class="nav-icon-btn" type="button" data-theme-switch aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i></button>
+          <button class="nav-icon-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" aria-label="Open cart">
+            <i class="bi bi-bag-heart"></i>
+            <span class="badge-count" data-cart-count style="display:none">0</span>
+          </button>
+          <button class="nav-icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-label="Open menu"><i class="bi bi-list"></i></button>
+        </div>
+
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+<ul class="navbar-nav">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Home</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="../index.html">Home 1</a></li>
+<li><a class="dropdown-item" href="../home-2.html">Home 2</a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="../menu.html">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="../pricing.html">Pricing</a></li>
+<li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+</ul>
+            </li>
+<li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="../menu.html">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="../pricing.html">Pricing</a></li>
+<li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+</ul>
+</div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ================= Mobile menu ================= -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header">
+      <a class="brand-logo" href="../index.html">
+        <span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+        Sugar &amp; <span class="si-text-gradient">Scoop</span>
+      </a>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column gap-1">
+<li class="nav-item"><a class="nav-link" href="../index.html">Home 1</a></li>
+<li class="nav-item"><a class="nav-link" href="../home-2.html">Home 2</a></li>
+<li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="../menu.html">Full Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="../ice-cream.html">Ice Cream</a></li>
+<li class="nav-item"><a class="nav-link" href="../sundaes.html">Sundaes</a></li>
+<li class="nav-item"><a class="nav-link" href="../waffles.html">Waffles</a></li>
+<li class="nav-item"><a class="nav-link" href="../crepes.html">Crepes</a></li>
+<li class="nav-item"><a class="nav-link" href="../milkshakes.html">Milkshakes</a></li>
+<li class="nav-item"><a class="nav-link" href="../pricing.html">Pricing</a></li>
+<li class="nav-item"><a class="nav-link" href="../blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+</ul>
+    </div>
+  </div>
+
+  <!-- ================= Cart drawer ================= -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title font-display" id="cartDrawerLabel">Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div class="flex-grow-1" data-cart-items></div>
+      <div class="text-center py-4" data-cart-empty>
+        <i class="bi bi-emoji-frown" style="font-size:3rem;color:var(--si-muted)"></i>
+        <p class="mt-2 mb-3 text-muted-soft">Your cart is empty. Sweet treats await!</p>
+        <a href="../menu.html" class="btn btn-grad">Browse Menu</a>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <span class="font-display fw-bold">Total</span>
+        <span class="product-price" data-cart-total>$0</span>
+      </div>
+      <a href="../checkout.html" class="btn btn-grad w-100">Checkout</a>
+    </div>
+  </div>
+
+  <!-- ================= Docs hero ================= -->
+  <section class="page-header" style="background-image:url('../assets/images/hero/hero-3.jpg')">
+    <div class="container">
+      <span class="hero-badge mb-3"><i class="bi bi-journal-code"></i> Template Documentation</span>
+      <h1 class="display-5 mb-3">Sugar &amp; Scoop <span class="si-text-gradient">Setup Guide</span></h1>
+      <p class="mb-0 opacity-75">Everything you need to customize this 21-page ice cream &amp; dessert parlour template.</p>
+    </div>
+  </section>
+
+  <!-- ================= Docs content ================= -->
+  <section class="si-section">
+    <div class="container">
+      <div class="row g-5">
+        <aside class="col-lg-3">
+          <nav class="docs-toc position-sticky" style="top:100px">
+            <h6 class="font-display fw-bold mb-3">On this page</h6>
+            <ul class="nav flex-column gap-1 small">
+              <li><a class="docs-toc-link" href="#getting-started">Getting Started</a></li>
+              <li><a class="docs-toc-link" href="#file-structure">File Structure</a></li>
+              <li><a class="docs-toc-link" href="#customization">Customization</a></li>
+              <li><a class="docs-toc-link" href="#theming">Colors &amp; Dark Mode</a></li>
+              <li><a class="docs-toc-link" href="#navigation">Navigation</a></li>
+              <li><a class="docs-toc-link" href="#hooks">JavaScript Hooks</a></li>
+              <li><a class="docs-toc-link" href="#cart">Cart &amp; Wishlist</a></li>
+              <li><a class="docs-toc-link" href="#search">Search, Filters &amp; Pagination</a></li>
+              <li><a class="docs-toc-link" href="#forms">Forms</a></li>
+              <li><a class="docs-toc-link" href="#countdowns">Countdowns &amp; Counters</a></li>
+              <li><a class="docs-toc-link" href="#animations">Scroll Animations</a></li>
+              <li><a class="docs-toc-link" href="#images">Images &amp; Media</a></li>
+              <li><a class="docs-toc-link" href="#business">Business Details</a></li>
+              <li><a class="docs-toc-link" href="#browser">Browser Support</a></li>
+              <li><a class="docs-toc-link" href="#rtl">RTL Support</a></li>
+            </ul>
+          </nav>
+        </aside>
+
+        <div class="col-lg-9 docs-content">
+
+          <h2 class="font-display fw-bold mb-3" id="getting-started">1. Getting Started</h2>
+          <p class="text-muted-soft">The template is 100% static - no build tools, no package manager, no server required. Open <code>index.html</code> in any browser to preview, or drop the folder onto any static host (Netlify, Vercel, GitHub Pages, cPanel, S3) to go live.</p>
+          <div class="alert alert-soft border-0 mb-4" style="background:rgba(255,93,143,.08)">
+            <i class="bi bi-info-circle me-1 text-primary"></i> All assets are bundled locally under <code>assets/</code>. There are zero external requests, so the site works offline and on any server configuration.
+          </div>
+
+          <h2 class="font-display fw-bold mb-3" id="file-structure">2. File Structure</h2>
+          <pre class="code-block">icecream-parlour/
+&#9500;&#9472;&#9472; index.html          Home - Classic
+&#9500;&#9472;&#9472; home-2.html        Home - Vibrant
+&#9500;&#9472;&#9472; about.html
+&#9500;&#9472;&#9472; menu.html          Full menu (filter + search)
+&#9500;&#9472;&#9472; ice-cream.html
+&#9500;&#9472;&#9472; sundaes.html
+&#9500;&#9472;&#9472; waffles.html
+&#9500;&#9472;&#9472; crepes.html
+&#9500;&#9472;&#9472; milkshakes.html
+&#9500;&#9472;&#9472; product-details.html
+&#9500;&#9472;&#9472; seasonal-specials.html
+&#9500;&#9472;&#9472; bulk-orders.html     Bulk calculator
+&#9500;&#9472;&#9472; pricing.html
+&#9500;&#9472;&#9472; blog.html
+&#9500;&#9472;&#9472; blog-details.html
+&#9500;&#9472;&#9472; contact.html
+&#9500;&#9472;&#9472; 404.html
+&#9500;&#9472;&#9472; coming-soon.html
+&#9500;&#9472;&#9472; documentation/
+&#9474;   &#9492;&#9472;&#9472; index.html     This guide
+&#9500;&#9472;&#9472; assets/
+&#9474;   &#9500;&#9472;&#9472; css/          bootstrap.min.css, style.css
+&#9474;   &#9500;&#9472;&#9472; js/           bootstrap.bundle.min.js, main.js
+&#9474;   &#9500;&#9472;&#9472; fonts/        Baloo 2 + Nunito Sans (woff2)
+&#9474;   &#9492;&#9472;&#9472; images/       favicon.svg + category folders</pre>
+
+          <h2 class="font-display fw-bold mb-3" id="customization">3. Customization</h2>
+          <h6 class="font-display fw-bold">Business info</h6>
+          <p class="text-muted-soft">Address, phone, email and opening hours appear in the footer of every page. Edit them once per file (or search-replace across the folder):</p>
+          <ul class="text-muted-soft small">
+            <li>Address: 123 Dessert Lane, 5th Avenue, New York, NY 10001</li>
+            <li>Phone: +1 (555) 234-8765</li>
+            <li>Email: hello@sugarandscoop.com</li>
+            <li>Hours: Mon-Fri 10am-10pm, Sat-Sun 9am-11pm</li>
+          </ul>
+          <h6 class="font-display fw-bold mt-4">Products</h6>
+          <p class="text-muted-soft">Product cards are plain HTML. Each card carries the data attributes that power the cart, wishlist and menu filters:</p>
+          <pre class="code-block">&lt;div class="product-card" data-product
+     data-product-id="p-101"
+     data-product-name="Rainbow Sprinkle Cone"
+     data-product-price="4.5"
+     data-product-img="assets/images/ice-cream/cone-sprinkle.jpg"
+     data-category="ice-cream classic"&gt;
+  &lt;img src="assets/images/ice-cream/cone-sprinkle.jpg" alt="..."&gt;
+  &lt;button type="button" data-wishlist&gt;&lt;/button&gt;
+  &lt;button type="button" data-add-to-cart&gt;&lt;/button&gt;
+&lt;/div&gt;</pre>
+          <p class="text-muted-soft small">Duplicate a card and change the text, image, price and <code>data-product-id</code> (keep ids unique per product across the whole site).</p>
+
+          <h2 class="font-display fw-bold mb-3" id="theming">4. Colors &amp; Dark Mode</h2>
+          <p class="text-muted-soft">All colors are CSS variables defined at the top of <code>assets/css/style.css</code>. Change them once and the whole site updates:</p>
+          <pre class="code-block">:root {
+  --si-primary: #ff5d8f;   /* pink */
+  --si-secondary: #9b5cf6; /* purple */
+  --si-accent: #2ec4b6;    /* mint   */
+  --si-accent-2: #ffa14f;  /* orange */
+}</pre>
+          <p class="text-muted-soft"><code>&lt;html data-bs-theme="light"&gt;</code> controls the theme. The header's <code>data-theme-switch</code> button toggles light/dark and saves the preference in <code>localStorage</code>. Dark-mode overrides live in a <code>body[data-bs-theme="dark"]</code> (handled via the same variable tokens, so most sections adapt automatically). To force a single theme, remove the switch button and set the attribute to your choice.</p>
+          <p class="text-muted-soft">Typography: <span class="font-display">Baloo 2</span> (display headings via <code>.font-display</code>) and Nunito Sans (body). Both are embedded as local <code>woff2</code> files.</p>
+
+          <h2 class="font-display fw-bold mb-3" id="navigation">5. Navigation</h2>
+          <p class="text-muted-soft">The header uses Bootstrap's navbar with dropdowns. To mark the current page active, add <code>active</code> to the corresponding <code>.nav-link</code> or <code>.dropdown-item</code> (and to its parent <code>li.nav-item.dropdown</code> toggle if the page lives inside a dropdown, like <code>ice-cream.html</code> under <em>Menu</em>). Every page includes the mobile offcanvas menu, cart drawer, search overlay, privacy/terms modals and toast container - keep these markup blocks intact when copying a page shell.</p>
+
+          <h2 class="font-display fw-bold mb-3" id="hooks">6. JavaScript Hooks</h2>
+          <p class="text-muted-soft">All behavior is driven by <code>data-*</code> attributes handled in <code>assets/js/main.js</code> - no inline scripts needed. Supported hooks:</p>
+          <div class="table-responsive">
+            <table class="table table-sm align-middle">
+              <thead><tr><th>Attribute</th><th>Purpose</th></tr></thead>
+              <tbody>
+                <tr><td><code>data-search-open</code> / <code>data-search-close</code></td><td>Open / close the full-screen search overlay.</td></tr>
+                <tr><td><code>data-theme-switch</code></td><td>Toggles light / dark theme (saved to localStorage).</td></tr>
+                <tr><td><code>data-add-to-cart</code></td><td>Adds the product (from sibling <code>data-product-*</code> on the card) to the cart.</td></tr>
+                <tr><td><code>data-wishlist</code></td><td>Toggles a product in the wishlist (persisted).</td></tr>
+                <tr><td><code>data-cart-count</code>, <code>data-cart-items</code>, <code>data-cart-empty</code>, <code>data-cart-total</code></td><td>Cart UI slots in the offcanvas drawer.</td></tr>
+                <tr><td><code>data-filter</code> + card <code>data-category</code></td><td>Client-side filtering (used on menu, ice-cream, blog).</td></tr>
+                <tr><td><code>data-menu-search</code> + <code>data-searchable</code></td><td>Live text search inside a grid.</td></tr>
+                <tr><td><code>.si-pagination</code> (<code>data-target</code>, <code>data-page-size</code>) + card <code>data-paginate</code></td><td>Client-side pagination.</td></tr>
+                <tr><td><code>data-countdown</code> + <code>.cd-days/.cd-hours/.cd-mins/.cd-secs</code></td><td>Countdown to a target datetime (e.g. 2026-09-30T23:59:59).</td></tr>
+                <tr><td><code>.stat-num</code> (<code>data-target</code>, <code>data-prefix</code>, <code>data-suffix</code>, <code>data-decimals</code>)</td><td>Animated number counter.</td></tr>
+                <tr><td><code>data-validate</code> + <code>required</code> + <code>data-success-message</code></td><td>Form validation and success feedback.</td></tr>
+                <tr><td><code>data-bulk-qty</code>, <code>data-rate</code>, <code>data-bulk-total</code></td><td>Bulk order price calculator.</td></tr>
+                <tr><td><code>.reveal</code>, <code>.reveal-delay-1/2/3</code></td><td>Scroll-reveal animations.</td></tr>
+                <tr><td><code>.qty-stepper</code> (<code>.qty-dec</code> / <code>.qty-inc</code>)</td><td>Quantity steppers on product detail pages.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="font-display fw-bold mb-3" id="cart">7. Cart &amp; Wishlist</h2>
+          <p class="text-muted-soft">The cart stores items in <code>localStorage</code> under <code>si_cart</code>. Clicking <code>data-add-to-cart</code> reads the product id/name/price/image from the card's <code>data-product-*</code> attributes, adds it to the basket, updates the <code>data-cart-count</code> badge and re-renders the drawer (<code>data-cart-items</code>), with the empty state in <code>data-cart-empty</code> and running total in <code>data-cart-total</code>. A confirmation toast is shown on add. Wishlist works the same way (key <code>si_wishlist</code>) and toggles the heart icon.</p>
+
+          <h2 class="font-display fw-bold mb-3" id="search">8. Search, Filters &amp; Pagination</h2>
+          <p class="text-muted-soft">The full-screen search overlay submits to <code>menu.html?q=...</code>; menu.html reads the query and pre-filters the grid. On listing pages (menu, ice-cream, blog): filter pills carry <code>data-filter="category-name"</code> and cards carry matching <code>data-category</code> tokens (space-separated). Cards also get <code>data-searchable</code> for the live <code>data-menu-search</code> input, and <code>data-paginate</code> for the <code>.si-pagination</code> wrapper. Filter, search and pagination combine together.</p>
+
+          <h2 class="font-display fw-bold mb-3" id="forms">9. Forms</h2>
+          <p class="text-muted-soft">Contact and newsletter forms are demo forms. Wrap the form in <code>data-validate</code>, mark inputs with <code>required</code> (plus <code>type="email"</code> for email), and add <code>data-success-message</code> to the form to show a success note on submit. No backend is connected - hook up your own endpoint by editing the form's <code>action</code>.</p>
+
+          <h2 class="font-display fw-bold mb-3" id="countdowns">10. Countdowns &amp; Counters</h2>
+          <p class="text-muted-soft">Countdowns render four cells with classes <code>.cd-days</code>, <code>.cd-hours</code>, <code>.cd-mins</code>, <code>.cd-secs</code>. Set the deadline with <code>data-countdown="2026-09-30T23:59:59"</code>. Counters (<code>.stat-num</code>) animate from 0 to <code>data-target</code> when scrolled into view; customize with <code>data-prefix</code>, <code>data-suffix</code> and <code>data-decimals</code>.</p>
+
+          <h2 class="font-display fw-bold mb-3" id="animations">11. Scroll Animations</h2>
+          <p class="text-muted-soft">Add <code>.reveal</code> to any element to fade it up on scroll. Stagger siblings with <code>.reveal-delay-1</code>, <code>.reveal-delay-2</code> or <code>.reveal-delay-3</code>. The back-to-top button (fixed bottom-right) appears after scrolling, and the header collapses its shadow on scroll.</p>
+
+          <h2 class="font-display fw-bold mb-3" id="images">12. Images &amp; Media</h2>
+          <p class="text-muted-soft">Images live in <code>assets/images/</code> grouped by category (<code>ice-cream/</code>, <code>sundaes/</code>, <code>waffles/</code>, <code>crepes/</code>, <code>milkshakes/</code>, <code>bakes/</code>, <code>blog/</code>, <code>events/</code>, <code>general/</code>, <code>team/</code>, <code>hero/</code>). Hero sections use inline <code>background-image</code> with a 1600px-wide photo for retina sharpness. To swap a photo, replace the file (keep the name) or update the <code>src</code> / <code>background-image</code>. Alt text should describe the dessert for accessibility.</p>
+
+          <h2 class="font-display fw-bold mb-3" id="business">13. Business Details</h2>
+          <p class="text-muted-soft">Keep these consistent across all pages when editing:</p>
+          <div class="table-responsive">
+            <table class="table table-sm">
+              <tbody>
+                <tr><th>Address</th><td>123 Dessert Lane, 5th Avenue, New York, NY 10001</td></tr>
+                <tr><th>Phone</th><td>+1 (555) 234-8765</td></tr>
+                <tr><th>Email</th><td>hello@sugarandscoop.com</td></tr>
+                <tr><th>Hours</th><td>Mon - Fri: 10am - 10pm, Sat - Sun: 9am - 11pm</td></tr>
+                <tr><th>Currency / Delivery</th><td>USD &middot; Free delivery over $25</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="font-display fw-bold mb-3" id="browser">14. Browser Support</h2>
+          <p class="text-muted-soft mb-0">Built with Bootstrap 5 (no jQuery), modern CSS variables and vanilla JavaScript (ES6). Works in the latest Chrome, Edge, Firefox and Safari. The layout is fully responsive from mobile to desktop.</p>
+
+          <h2 class="font-display fw-bold mb-3 mt-4" id="rtl">15. RTL Support</h2>
+          <p class="text-muted-soft mb-3">The template ships with RTL-aware rules (<code>[dir="rtl"]</code> in <code>style.css</code> uses logical CSS properties and mirrored overrides for the navbar, dropdowns, cards, forms, search overlay and auth pages). To publish an Arabic or Hebrew version:</p>
+          <pre class="code-block"><code>1. In every page's &lt;head&gt;, replace
+     &lt;link rel="stylesheet" href="assets/css/bootstrap.min.css"&gt;
+   with
+     &lt;link rel="stylesheet" href="assets/css/bootstrap.rtl.min.css"&gt;
+
+2. Set the document direction and language on the &lt;html&gt; tag:
+     &lt;html lang="ar" dir="rtl"&gt;
+
+3. Flip the social/back-to-top float styles if needed - the core layout
+   (navigation, grid, cards, forms, footer) already mirrors correctly.</code></pre>
+          <p class="text-muted-soft mt-3 mb-0">Bootstrap handles the global direction; <code>style.css</code> provides the dessert-brand RTL overrides so spacing, icons and dropdowns mirror consistently.</p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-column footer-brand-column">
+          <a class="brand-logo footer-brand-logo" href="../index.html">
+            <span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+            Sugar &amp; <span class="si-text-gradient">Scoop</span>
+          </a>
+          <p class="footer-description">Handcrafted ice cream, sundaes, waffles, crepes and shakes made fresh daily in small batches.</p>
+          <div class="footer-socials" aria-label="Social media">
+            <a aria-label="YouTube (opens in new tab)" class="social-circle" href="https://youtube.com/@sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-youtube"></i></a>
+            <a aria-label="X / Twitter (opens in new tab)" class="social-circle" href="https://x.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-twitter-x"></i></a>
+            <a aria-label="Instagram (opens in new tab)" class="social-circle" href="https://instagram.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a aria-label="Facebook (opens in new tab)" class="social-circle" href="https://facebook.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h5>Quick Links</h5>
+          <nav class="footer-links" aria-label="Quick Links">
+            <a class="footer-link" href="../about.html">About Us</a>
+            <a class="footer-link" href="../menu.html">Services</a>
+            <a class="footer-link" href="../pricing.html">Pricing</a>
+            <a class="footer-link" href="../blog.html">Blog</a>
+            <a class="footer-link" href="../contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-column">
+          <h5>Our Menu</h5>
+          <nav class="footer-links" aria-label="Our Menu">
+            <a class="footer-link" href="../ice-cream.html">Ice Cream</a>
+            <a class="footer-link" href="../sundaes.html">Sundaes</a>
+            <a class="footer-link" href="../waffles.html">Waffles</a>
+            <a class="footer-link" href="../crepes.html">Crepes</a>
+            <a class="footer-link" href="../milkshakes.html">Milkshakes</a>
+          </nav>
+        </div>
+
+        <div class="footer-column footer-contact-column">
+          <h5>Get In Touch</h5>
+          <ul class="info-list footer-contact-list mb-3">
+            <li>
+              <span class="info-ic"><i class="bi bi-geo-alt"></i></span>
+              <div><strong class="font-display d-block">Our Address</strong><span>123 Dessert Lane, 5th Avenue, New York, NY 10001</span></div>
+            </li>
+            <li>
+              <span class="info-ic"><i class="bi bi-telephone"></i></span>
+              <div><strong class="font-display d-block">Call Us</strong><span>+1 (555) 234-8765</span></div>
+            </li>
+            <li>
+              <span class="info-ic"><i class="bi bi-envelope"></i></span>
+              <div><strong class="font-display d-block">Email Us</strong><span>hello@sugarandscoop.com</span></div>
+            </li>
+          </ul>
+          <h6 class="footer-subheading font-display mt-3 mb-2">Newsletter</h6>
+          <form class="footer-newsletter-form newsletter-form d-flex gap-2" data-success-message="Thank you for subscribing to Sugar &amp; Scoop!" data-validate="">
+            <input aria-label="Your email address" class="form-control form-control-sm" placeholder="Email address" required="" type="email"/>
+            <button class="btn btn-grad btn-sm px-3" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">&copy; 2026 <strong class="font-display">Sugar &amp; Scoop</strong>. All rights reserved.</div>
+        <div class="footer-legal">
+          <a class="text-muted-soft" data-bs-target="#privacyModal" data-bs-toggle="modal" href="#">Privacy Policy</a>
+          <a class="text-muted-soft" data-bs-target="#termsModal" data-bs-toggle="modal" href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+  </div>
+
+  <!-- ================= Privacy modal ================= -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-display">Privacy Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-muted-soft">Last updated: January 2026</p>
+          <p>At Sugar &amp; Scoop we respect your privacy. This policy explains what we collect and how we use it.</p>
+          <h6 class="font-display mt-3">Information we collect</h6>
+          <p class="text-muted-soft small">We collect the information you give us when ordering, subscribing to our newsletter or contacting us - such as your name, email address, delivery address and order history.</p>
+          <h6 class="font-display mt-3">How we use it</h6>
+          <p class="text-muted-soft small">We use your information to process orders, deliver desserts, send offers you have opted into, and improve our services. We never sell your data to third parties.</p>
+          <h6 class="font-display mt-3">Contact</h6>
+          <p class="text-muted-soft small">For any privacy questions, email privacy@sugarandscoop.com or write to 123 Dessert Lane, New York, NY 10001.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grad" data-bs-dismiss="modal">Got it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Terms modal ================= -->
+  <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-display">Terms &amp; Conditions</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-muted-soft">Last updated: January 2026</p>
+          <h6 class="font-display mt-3">Orders</h6>
+          <p class="text-muted-soft small">All orders are subject to availability. Prices are shown in USD and include applicable taxes unless stated otherwise.</p>
+          <h6 class="font-display mt-3">Delivery</h6>
+          <p class="text-muted-soft small">We deliver within the city in insulated packaging. Orders over $25 qualify for free delivery.</p>
+          <h6 class="font-display mt-3">Allergens</h6>
+          <p class="text-muted-soft small">Our parlour handles dairy, nuts, gluten and soy. Please tell our team about any allergies before ordering.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grad" data-bs-dismiss="modal">Got it</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Toast container ================= -->
+  <div class="toast-container position-fixed top-0 end-0 p-3"></div>
+
+  <!-- ================= Back to top ================= -->
+  <button class="back-to-top" type="button" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

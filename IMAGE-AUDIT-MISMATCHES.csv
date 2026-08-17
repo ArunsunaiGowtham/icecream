@@ -1,0 +1,21 @@
+Page/Section,Item,Current Image,Status,Reason
+Home, Belgian Dark Dip Cone,assets/images/ice-cream/cone-choco.jpg,FIXED,Replaced fruit drinks photo with authentic chocolate gelato dipped in 70% Belgian dark chocolate waffle cone photo
+Home, Chewy Cookie Trio,assets/images/bakes/cookies.jpg,FIXED,Replaced waffle photo with authentic freshly baked chewy chocolate chip cookies photo
+Home, Glazed Donut Box,assets/images/bakes/donuts-box.jpg,FIXED,Replaced vegetables photo with authentic box of six assorted glazed donuts photo
+Ice Cream, Madagascar Vanilla,assets/images/ice-cream/scoop-vanilla.jpg,FIXED,Replaced coastline photo with authentic Madagascar vanilla bean gelato scoop photo
+Ice Cream, Scoop Trio,assets/images/ice-cream/pop-flatlay.jpg,MISMATCH,Actual image is fruit pops
+Sundaes, Hot Brownie Mountain,assets/images/sundaes/sundae-brownie.jpg,FIXED,Replaced tea photo with authentic warm brownie mountain sundae photo
+Sundaes, Midnight Fudge Sundae,assets/images/sundaes/sundae-choco.jpg,FIXED,Replaced freakshake mug photo with authentic Midnight Fudge chocolate sundae in glass cup photo
+Sundaes, Pink Cloud,assets/images/sundaes/sundae-pink.jpg,FIXED,Replaced waffle cone photo with authentic Pink Cloud strawberry sundae with marshmallow fluff and sprinkles photo
+Sundaes, Berry Festival,assets/images/sundaes/sundae-berries.jpg,FIXED,Replaced plain scoop in bowl photo with authentic Berry Festival sundae with mixed berries in glass bowl photo
+Sundaes, Classic Float,assets/images/sundaes/sundae-glass.jpg,MISMATCH,Actual image is a sundae rather than a float
+Crepes, Classic Butter & Sugar,assets/images/crepes/crepe-classic.jpg,FIXED,Replaced brownie photo with authentic folded butter and sugar crepe photo
+Milkshakes, Mango Tango,assets/images/milkshakes/shake-mango.jpg,FIXED,Replaced pink shake photo with authentic golden tropical Alphonso mango milkshake photo
+Milkshakes, Vanilla Bean Dream,assets/images/milkshakes/shake-vanilla.jpg,FIXED,Replaced two-tone shake with authentic creamy Madagascar vanilla bean milkshake in tall diner glass photo
+Milkshakes, Brownie Royale,assets/images/milkshakes/shake-brownie.jpg,FIXED,Replaced sprinkles shake photo with authentic chocolate fudge shake with brownie on top photo
+Seasonal, Peach Melba Waffle,assets/images/waffles/waffle-banana.jpg,MISMATCH,Actual image is banana waffle
+Seasonal, Lava Cake Duo,assets/images/events/event-lava.jpg,FIXED,Replaced sundae with authentic molten chocolate lava cake photo
+Blog Detail, Scoop Fest,assets/images/blog/blog-summer-scoop-fest.svg,FIXED,Replaced birthday cupcakes photo with dedicated festival graphic and assets
+Home (Our Story), Fresh waffles with syrup,assets/images/general/story-waffles.jpg,FIXED,Was a mountain landscape photo with no relation to food; replaced with assets/images/waffles/waffle-belgian.jpg
+Home (Our Story), Iced drink,assets/images/general/story-shake.jpg,FIXED,Was a cinnamon-roll pastry photo with no relation to a drink; replaced with assets/images/milkshakes/shake-strawberry.jpg
+About (Our Story), Lava cake with ice cream,assets/images/hero/hero-1.jpg,FIXED,Alt text described a lava cake but image is an Oreo chocolate parfait sundae; alt text corrected to match the actual image

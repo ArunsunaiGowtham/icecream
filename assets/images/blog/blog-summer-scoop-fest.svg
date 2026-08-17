@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f8c7dd"/><stop offset="1" stop-color="#fff0d5"/></linearGradient></defs>
+<rect width="900" height="600" fill="url(#sky)"/>
+<path d="M0 410 Q220 350 450 410 T900 410 V600 H0Z" fill="#b8dfc1"/>
+<path d="M0 450 Q220 390 450 450 T900 450 V600 H0Z" fill="#8cc7a0"/>
+<g fill="#fff" stroke="#8d4d6d" stroke-width="6">
+<path d="M120 105 h120 l-18 130 h-84z"/><path d="M390 80 h120 l-18 155 h-84z"/><path d="M660 110 h120 l-18 125 h-84z"/>
+</g>
+<g fill="#7c3f72"><path d="M120 105 L180 55 L240 105Z"/><path d="M390 80 L450 30 L510 80Z"/><path d="M660 110 L720 60 L780 110Z"/></g>
+<g stroke="#fff" stroke-width="8"><path d="M180 105 V235"/><path d="M450 80 V235"/><path d="M720 110 V235"/></g>
+<g>
+<path d="M380 470 Q450 420 520 470 L500 520 H400Z" fill="#f1a24a" stroke="#75452b" stroke-width="7"/>
+<path d="M400 470 Q450 380 500 470Z" fill="#d87aa0" stroke="#75452b" stroke-width="7"/>
+<circle cx="450" cy="410" r="38" fill="#fff1c2" stroke="#75452b" stroke-width="7"/>
+</g>
+<text x="450" y="565" text-anchor="middle" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#653b5d">SUMMER SCOOP FEST</text>
+</svg>

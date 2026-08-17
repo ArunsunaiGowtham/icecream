@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+
+<html data-bs-theme="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Sugar &amp; Scoop - A premium ice cream &amp; dessert parlour. Handcrafted cones, sundaes, waffles, crepes and milkshakes made fresh daily." name="description"/>
+<title>Sugar &amp; Scoop - Premium Ice Cream &amp; Dessert Parlour</title>
+<link href="assets/images/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="assets/fonts/fonts.css" rel="stylesheet"/>
+<link href="assets/css/bootstrap.min.css" id="mainBootstrapCss" rel="stylesheet"/>
+  <script>(function(){try{var d=localStorage.getItem("si_dir")||localStorage.getItem("layoutDirection");if(d==="rtl"){document.documentElement.setAttribute("dir","rtl");document.documentElement.setAttribute("lang","ar");var l=document.getElementById("mainBootstrapCss");if(l)l.setAttribute("href","assets/css/bootstrap.rtl.min.css");}}catch(e){}})();</script>
+<!-- RTL: to enable Arabic/Hebrew layouts, replace bootstrap.min.css with bootstrap.rtl.min.css and add dir="rtl" lang="ar" to the <html> tag. -->
+<link href="assets/css/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="https://www.sugarandscoop.com/index.html" rel="canonical"/>
+<!-- Open Graph / Social -->
+<meta content="website" property="og:type"/>
+<meta content="Sugar &amp; Scoop" property="og:site_name"/>
+<meta content="Sugar &amp; Scoop - Premium Ice Cream &amp; Dessert Parlour" property="og:title"/>
+<meta content="Sugar &amp; Scoop - A premium ice cream &amp; dessert parlour. Handcrafted cones, sundaes, waffles, crepes and milkshakes made fresh daily." property="og:description"/>
+<meta content="https://www.sugarandscoop.com/assets/images/hero/hero-2.jpg" property="og:image"/>
+<meta content="https://www.sugarandscoop.com/index.html" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Sugar &amp; Scoop - Premium Ice Cream &amp; Dessert Parlour" name="twitter:title"/>
+<meta content="Sugar &amp; Scoop - A premium ice cream &amp; dessert parlour. Handcrafted cones, sundaes, waffles, crepes and milkshakes made fresh daily." name="twitter:description"/>
+<meta content="https://www.sugarandscoop.com/assets/images/hero/hero-2.jpg" name="twitter:image"/>
+</head>
+<body>
+<!-- ================= Header ================= -->
+<header class="site-header">
+<nav class="navbar navbar-expand-lg">
+<div class="container">
+<a class="brand-logo" href="index.html">
+<span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+          Sugar &amp; <span class="si-text-gradient">Scoop</span>
+</a>
+<div class="header-actions d-flex align-items-center order-lg-last ms-lg-3">
+<button aria-label="Toggle dark mode" class="nav-icon-btn" data-theme-switch="" type="button"><i class="bi bi-moon-stars-fill"></i></button>
+<button aria-label="Switch to right-to-left layout" class="nav-icon-btn d-none d-lg-inline-flex" data-dir-switch="" type="button"><i class="bi bi-text-right"></i></button>
+<button aria-label="Open menu" class="nav-icon-btn d-lg-none" data-bs-target="#mobileMenu" data-bs-toggle="offcanvas" type="button"><i class="bi bi-list"></i></button>
+<a class="btn btn-sm btn-grad nav-order-btn" href="menu.html">Order Now</a>
+<button aria-label="Open cart" class="nav-icon-btn" data-bs-target="#cartDrawer" data-bs-toggle="offcanvas" type="button">
+<i class="bi bi-bag-heart"></i>
+<span class="badge-count" data-cart-count="" style="display:none">0</span>
+</button>
+</div><div class="collapse navbar-collapse justify-content-center" id="mainNav">
+<ul class="navbar-nav">
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">Home</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item active" href="index.html">Home 1</a></li>
+<li><a class="dropdown-item" href="home-2.html">Home 2</a></li>
+</ul>
+</li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
+<!-- ================= Mobile menu ================= -->
+<div aria-labelledby="mobileMenuLabel" class="offcanvas offcanvas-end" id="mobileMenu" tabindex="-1">
+<div class="offcanvas-header">
+<a class="brand-logo" href="index.html">
+<span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+        Sugar &amp; <span class="si-text-gradient">Scoop</span>
+</a>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<ul class="nav flex-column gap-1">
+<li class="nav-item"><a class="nav-link active" href="index.html">Home 1</a></li>
+<li class="nav-item"><a class="nav-link" href="home-2.html">Home 2</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="menu.html">Full Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="ice-cream.html">Ice Cream</a></li>
+<li class="nav-item"><a class="nav-link" href="sundaes.html">Sundaes</a></li>
+<li class="nav-item"><a class="nav-link" href="waffles.html">Waffles</a></li>
+<li class="nav-item"><a class="nav-link" href="crepes.html">Crepes</a></li>
+<li class="nav-item"><a class="nav-link" href="milkshakes.html">Milkshakes</a></li>
+<li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+<div class="mt-3 pt-2"><a class="btn btn-grad w-100" href="menu.html">Order Now</a></div>
+</div>
+</div>
+<!-- ================= Cart drawer ================= -->
+<div aria-labelledby="cartDrawerLabel" class="offcanvas offcanvas-end" id="cartDrawer" tabindex="-1">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title font-display" id="cartDrawerLabel">Your Cart</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" type="button"></button>
+</div>
+<div class="offcanvas-body d-flex flex-column">
+<div class="flex-grow-1" data-cart-items=""></div>
+<div class="text-center py-4" data-cart-empty="">
+<i class="bi bi-emoji-frown" style="font-size:3rem;color:var(--si-muted)"></i>
+<p class="mt-2 mb-3 text-muted-soft">Your cart is empty. Sweet treats await!</p>
+<a class="btn btn-grad" href="menu.html">Browse Menu</a>
+</div>
+<hr/>
+<div class="d-flex justify-content-between align-items-center mb-3">
+<span class="font-display fw-bold">Total</span>
+<span class="product-price" data-cart-total="">$0</span>
+</div>
+<a class="btn btn-grad w-100" href="checkout.html">Checkout</a>
+</div>
+</div>
+<!-- ================= Hero ================= -->
+<section class="hero" id="home">
+<div class="hero-slide active" style="background-image:url('assets/images/hero/hero-1.jpg')"></div>
+<div class="hero-slide" style="background-image:url('assets/images/hero/hero-2.jpg')"></div>
+<div class="hero-slide" style="background-image:url('assets/images/hero/hero-4.jpg')"></div>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-10 col-xl-9">
+<div class="hero-content">
+<span class="hero-badge"><i class="bi bi-star-fill"></i> Handcrafted daily in small batches</span>
+<h1 class="hero-title">Sweet Moments, <span class="si-text-gradient">One Scoop</span> at a Time</h1>
+<p class="hero-text lead">Small-batch ice cream, dripping sundaes, golden waffles and shakes made with real fruit, fair-trade chocolate and a whole lot of love.</p>
+<div class="hero-btns">
+<a class="btn btn-grad btn-lg" href="menu.html">Explore the Menu <i class="bi bi-arrow-right ms-1"></i></a>
+<a class="btn btn-hero-secondary btn-lg" href="about.html">Our Story</a>
+</div>
+<div class="hero-stats">
+<div class="hero-stat-item">
+<div class="hero-stat-num">4.9</div>
+<div class="hero-stat-label"><i class="bi bi-star-fill text-warning"></i> 12k+ reviews</div>
+</div>
+<div class="hero-stat-item">
+<div class="hero-stat-num">25+</div>
+<div class="hero-stat-label">Signature scoops</div>
+</div>
+<div class="hero-stat-item">
+<div class="hero-stat-num">10k+</div>
+<div class="hero-stat-label">Happy customers</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Features ================= -->
+<section class="si-section" id="features">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-6 col-lg-3 reveal">
+<div class="feature-card text-center">
+<span class="icon-bubble mb-3"><i class="bi bi-snow"></i></span>
+<h5>Freshly Churned</h5>
+<p class="mb-0 text-muted-soft small">Every batch is made in-house each morning - never frozen twice.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-1">
+<div class="feature-card text-center">
+<span class="icon-bubble icon-bubble-purple mb-3"><i class="bi bi-flower1"></i></span>
+<h5>Real Ingredients</h5>
+<p class="mb-0 text-muted-soft small">Fresh fruit, single-origin chocolate and local dairy. Nothing artificial.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-2">
+<div class="feature-card text-center">
+<span class="icon-bubble icon-bubble-mint mb-3"><i class="bi bi-leaf"></i></span>
+<h5>Vegan Friendly</h5>
+<p class="mb-0 text-muted-soft small">Coconut and oat bases, plus a full range of plant-based toppings.</p>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-3">
+<div class="feature-card text-center">
+<span class="icon-bubble mb-3"><i class="bi bi-truck"></i></span>
+<h5>Fast Delivery</h5>
+<p class="mb-0 text-muted-soft small">Same-day delivery across the city in insulated, eco-friendly boxes.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Featured products ================= -->
+<section class="si-section bg-soft" id="featured">
+<div class="container">
+<div class="si-section-head text-center mb-5">
+<span class="si-eyebrow"><i class="bi bi-ice-cream"></i> Our Signature Scoops</span>
+<h2 class="display-5 mt-3 mb-1">Customer Favourites</h2>
+<p class="text-muted-soft mb-0">The cones everyone drives across town for.</p>
+<div class="si-divider"></div>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-lg-3 reveal">
+<div class="product-card" data-category="ice-cream classic" data-product="" data-product-id="p-201" data-product-img="assets/images/ice-cream/cone-sprinkle.jpg" data-product-name="Rainbow Sprinkle Cone" data-product-price="4.5">
+<div class="product-media">
+<img alt="Rainbow sprinkle ice cream cone" loading="lazy" src="assets/images/ice-cream/cone-sprinkle.jpg"/>
+<span class="product-badge">Bestseller</span>
+<div class="product-actions">
+<button aria-label="Add to wishlist" class="product-action-btn" data-wishlist="" type="button"><i class="bi bi-heart"></i></button>
+<button aria-label="Add to cart" class="product-action-btn" data-add-to-cart="" type="button"><i class="bi bi-bag-plus"></i></button>
+</div>
+</div>
+<div class="product-body">
+<h3 class="product-title"><a href="product-details.html?slug=rainbow-sprinkle-cone">Rainbow Sprinkle Cone</a></h3>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted-soft">(214)</span></div>
+<p class="product-desc">Vanilla bean base rolled in house-made rainbow sprinkles.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="product-price">$4.50</span>
+<a class="btn btn-sm btn-grad-soft" href="product-details.html?slug=rainbow-sprinkle-cone">Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-1">
+<div class="product-card" data-category="ice-cream classic" data-product="" data-product-id="p-301" data-product-img="assets/images/ice-cream/cone-choco.jpg" data-product-name="Belgian Dark Dip Cone" data-product-price="5.25">
+<div class="product-media">
+<img alt="Chocolate dipped ice cream cone" loading="lazy" src="assets/images/ice-cream/cone-choco.jpg"/>
+<span class="product-badge badge-purple">New</span>
+<div class="product-actions">
+<button aria-label="Add to wishlist" class="product-action-btn" data-wishlist="" type="button"><i class="bi bi-heart"></i></button>
+<button aria-label="Add to cart" class="product-action-btn" data-add-to-cart="" type="button"><i class="bi bi-bag-plus"></i></button>
+</div>
+</div>
+<div class="product-body">
+<h3 class="product-title"><a href="product-details.html?slug=belgian-dark-dip-cone">Belgian Dark Dip Cone</a></h3>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="text-muted-soft">(162)</span></div>
+<p class="product-desc">Smooth chocolate gelato dipped in 70% Belgian dark chocolate.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="product-price">$5.25</span>
+<a class="btn btn-sm btn-grad-soft" href="product-details.html?slug=belgian-dark-dip-cone">Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-2">
+<div class="product-card" data-category="ice-cream fruit" data-product="" data-product-id="p-202" data-product-img="assets/images/ice-cream/cone-straw-single.jpg" data-product-name="Strawberry Fields Cone" data-product-price="4.75">
+<div class="product-media">
+<img alt="Strawberry ice cream cone" loading="lazy" src="assets/images/ice-cream/cone-straw-single.jpg"/>
+<div class="product-actions">
+<button aria-label="Add to wishlist" class="product-action-btn" data-wishlist="" type="button"><i class="bi bi-heart"></i></button>
+<button aria-label="Add to cart" class="product-action-btn" data-add-to-cart="" type="button"><i class="bi bi-bag-plus"></i></button>
+</div>
+</div>
+<div class="product-body">
+<h3 class="product-title"><a href="product-details.html?slug=strawberry-fields-cone">Strawberry Fields Cone</a></h3>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> <span class="text-muted-soft">(388)</span></div>
+<p class="product-desc">Ripe strawberry gelato made with sun-grown local berries.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="product-price">$4.75</span>
+<a class="btn btn-sm btn-grad-soft" href="product-details.html?slug=strawberry-fields-cone">Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-3">
+<div class="product-card" data-category="ice-cream classic" data-product="" data-product-id="p-203" data-product-img="assets/images/ice-cream/scoop-duo.jpg" data-product-name="Double Vanilla Scoop" data-product-price="5.0">
+<div class="product-media">
+<img alt="Double vanilla ice cream scoops" loading="lazy" src="assets/images/ice-cream/scoop-duo.jpg"/>
+<span class="product-badge badge-mint">Vegan</span>
+<div class="product-actions">
+<button aria-label="Add to wishlist" class="product-action-btn" data-wishlist="" type="button"><i class="bi bi-heart"></i></button>
+<button aria-label="Add to cart" class="product-action-btn" data-add-to-cart="" type="button"><i class="bi bi-bag-plus"></i></button>
+</div>
+</div>
+<div class="product-body">
+<h3 class="product-title"><a href="product-details.html?slug=double-vanilla-scoop">Double Vanilla Scoop</a></h3>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted-soft">(276)</span></div>
+<p class="product-desc">Two generous scoops of Madagascar vanilla bean gelato.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="product-price">$5.00</span>
+<a class="btn btn-sm btn-grad-soft" href="product-details.html?slug=double-vanilla-scoop">Details</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-5 reveal">
+<a class="btn btn-outline-scoop btn-lg" href="menu.html">View Full Menu <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</div>
+</section>
+<!-- ================= About / story ================= -->
+<section class="si-section" id="about">
+<div class="container">
+<div class="row align-items-center g-5">
+<div class="col-lg-6 reveal">
+<div class="position-relative">
+<img alt="Fresh waffles with syrup at Sugar and Scoop" class="rounded-5 si-shadow w-100" loading="lazy" src="assets/images/waffles/waffle-belgian.jpg" style="object-fit:cover;height:480px"/>
+<img alt="Iced drink at Sugar and Scoop" class="rounded-4 si-shadow position-absolute d-none d-md-block" loading="lazy" src="assets/images/milkshakes/shake-strawberry.jpg" style="width:220px;height:220px;object-fit:cover;left:-40px;bottom:-30px;border:6px solid var(--si-surface)"/>
+<span class="position-absolute badge rounded-5" style="top:-18px;right:24px;background:var(--si-gradient);color:#fff;padding:.9rem 1.2rem;font-family:var(--si-font-display);font-size:1rem;font-weight:800;box-shadow:var(--si-shadow)">
+              Since 2012 <i class="bi bi-heart-fill"></i>
+</span>
+</div>
+</div>
+<div class="col-lg-6 reveal reveal-delay-1">
+<span class="si-eyebrow"><i class="bi bi-journal-richtext"></i> Our Story</span>
+<h2 class="display-6 mt-3 mb-3">A Little Scoop Shop That Grew a Big Heart</h2>
+<p class="text-muted-soft">What started as a tiny parlour with one churn and one stubborn dream is now the neighbourhood's sweetest spot. We still make every flavour by hand, still taste-test everything, and still believe the best dessert is the one you share.</p>
+<div class="d-flex flex-column gap-3 my-4">
+<div class="d-flex align-items-center gap-3">
+<span class="step-num" style="width:44px;height:44px;font-size:1.05rem;margin:0">1</span>
+<div><strong class="font-display">Small batches</strong><div class="text-muted-soft small">Churned daily, never frozen twice.</div></div>
+</div>
+<div class="d-flex align-items-center gap-3">
+<span class="step-num" style="width:44px;height:44px;font-size:1.05rem;margin:0;background:linear-gradient(135deg,#9b5cf6,#ff5d8f)">2</span>
+<div><strong class="font-display">Zero shortcuts</strong><div class="text-muted-soft small">Real fruit, real chocolate, real butter.</div></div>
+</div>
+<div class="d-flex align-items-center gap-3">
+<span class="step-num" style="width:44px;height:44px;font-size:1.05rem;margin:0;background:linear-gradient(135deg,#2ec4b6,#9b5cf6)">3</span>
+<div><strong class="font-display">Good to the planet</strong><div class="text-muted-soft small">Compostable packaging &amp; local suppliers.</div></div>
+</div>
+</div>
+<a class="btn btn-grad" href="about.html">Learn More About Us <i class="bi bi-arrow-right ms-1"></i></a>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Category cards ================= -->
+<section class="si-section bg-soft" id="categories">
+<div class="container">
+<div class="si-section-head text-center mb-5">
+<span class="si-eyebrow"><i class="bi bi-grid-1x2"></i> Browse by Craving</span>
+<h2 class="display-5 mt-3 mb-1">Pick Your Treat</h2>
+<p class="text-muted-soft mb-0">Whatever you're in the mood for, we've got you covered.</p>
+<div class="si-divider"></div>
+</div>
+<div class="row g-4">
+<div class="col-sm-6 col-lg-4 reveal">
+<a class="deal-card d-block" href="ice-cream.html">
+<img alt="Ice cream cones" class="deal-bg" loading="lazy" src="assets/images/ice-cream/cone-sprinkle.jpg"/>
+<div class="deal-body">
+<h4 class="mb-1">Ice Cream</h4>
+<p class="mb-2 small opacity-75">25+ handcrafted scoops &amp; cones</p>
+<span class="btn btn-sm btn-grad">Shop Now</span>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-lg-4 reveal reveal-delay-1">
+<a class="deal-card d-block" href="sundaes.html">
+<img alt="Brownie sundae" class="deal-bg" loading="lazy" src="assets/images/sundaes/sundae-brownie.jpg"/>
+<div class="deal-body">
+<h4 class="mb-1">Sundaes</h4>
+<p class="mb-2 small opacity-75">Layered, loaded &amp; legendary</p>
+<span class="btn btn-sm btn-grad">Shop Now</span>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-lg-4 reveal reveal-delay-2">
+<a class="deal-card d-block" href="waffles.html">
+<img alt="Strawberry waffles" class="deal-bg" loading="lazy" src="assets/images/waffles/waffle-strawberry.jpg"/>
+<div class="deal-body">
+<h4 class="mb-1">Waffles</h4>
+<p class="mb-2 small opacity-75">Golden, crisp &amp; stack-worthy</p>
+<span class="btn btn-sm btn-grad">Shop Now</span>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-lg-4 reveal">
+<a class="deal-card d-block" href="crepes.html">
+<img alt="Crepe with ice cream" class="deal-bg" loading="lazy" src="assets/images/crepes/crepe-icecream.jpg"/>
+<div class="deal-body">
+<h4 class="mb-1">Crepes</h4>
+<p class="mb-2 small opacity-75">Delicate, buttery &amp; folded fresh</p>
+<span class="btn btn-sm btn-grad">Shop Now</span>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-lg-4 reveal reveal-delay-1">
+<a class="deal-card d-block" href="milkshakes.html">
+<img alt="Chocolate milkshake with sprinkles" class="deal-bg" loading="lazy" src="assets/images/milkshakes/shake-choco-sprinkles.jpg"/>
+<div class="deal-body">
+<h4 class="mb-1">Milkshakes</h4>
+<p class="mb-2 small opacity-75">Thick, creamy &amp; over-the-top</p>
+<span class="btn btn-sm btn-grad">Shop Now</span>
+</div>
+</a>
+</div>
+<div class="col-sm-6 col-lg-4 reveal reveal-delay-2">
+<a class="deal-card d-block" href="menu.html">
+<img alt="Chocolate cake and bakes" class="deal-bg" loading="lazy" src="assets/images/bakes/cake-chocolate.jpg"/>
+<div class="deal-body">
+<h4 class="mb-1">Bakes &amp; More</h4>
+<p class="mb-2 small opacity-75">Cakes, cookies &amp; warm desserts</p>
+<span class="btn btn-sm btn-grad">Shop Now</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Popular desserts ================= -->
+<section class="si-section" id="popular">
+<div class="container">
+<div class="si-section-head text-center mb-5">
+<span class="si-eyebrow"><i class="bi bi-cake2"></i> From the Bakery Case</span>
+<h2 class="display-5 mt-3 mb-1">Popular Desserts</h2>
+<p class="text-muted-soft mb-0">Fresh bakes that disappear before closing time - grab yours early.</p>
+<div class="si-divider"></div>
+</div>
+<div class="row g-4">
+<div class="col-md-6 col-lg-3 reveal">
+<div class="product-card" data-category="desserts" data-product="" data-product-id="p-302" data-product-img="assets/images/bakes/cake-chocolate.jpg" data-product-name="Chocolate Layer Cake" data-product-price="4.50">
+<div class="product-media">
+<img alt="Chocolate layer cake slice" loading="lazy" src="assets/images/bakes/cake-chocolate.jpg"/>
+<span class="product-badge">Bestseller</span>
+<div class="product-actions">
+<button aria-label="Add to wishlist" class="product-action-btn" data-wishlist="" type="button"><i class="bi bi-heart"></i></button>
+<button aria-label="Add to cart" class="product-action-btn" data-add-to-cart="" type="button"><i class="bi bi-bag-plus"></i></button>
+</div>
+</div>
+<div class="product-body">
+<h3 class="product-title"><a href="product-details.html?slug=chocolate-layer-cake">Chocolate Layer Cake</a></h3>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> <span class="text-muted-soft">(301)</span></div>
+<p class="product-desc">Four layers of dark chocolate cake with silky ganache.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="product-price">$4.50</span>
+<a class="btn btn-sm btn-grad-soft" href="product-details.html?slug=chocolate-layer-cake">Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-1">
+<div class="product-card" data-category="desserts" data-product="" data-product-id="p-303" data-product-img="assets/images/bakes/cookies.jpg" data-product-name="Chewy Cookie Trio" data-product-price="3.75">
+<div class="product-media">
+<img alt="Stack of chewy cookies" loading="lazy" src="assets/images/bakes/cookies.jpg"/>
+<div class="product-actions">
+<button aria-label="Add to wishlist" class="product-action-btn" data-wishlist="" type="button"><i class="bi bi-heart"></i></button>
+<button aria-label="Add to cart" class="product-action-btn" data-add-to-cart="" type="button"><i class="bi bi-bag-plus"></i></button>
+</div>
+</div>
+<div class="product-body">
+<h3 class="product-title"><a href="product-details.html?slug=chewy-cookie-trio">Chewy Cookie Trio</a></h3>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted-soft">(245)</span></div>
+<p class="product-desc">Brown-butter cookies baked chewy on the inside, crisp at the edges.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="product-price">$3.75</span>
+<a class="btn btn-sm btn-grad-soft" href="product-details.html?slug=chewy-cookie-trio">Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-2">
+<div class="product-card" data-category="desserts" data-product="" data-product-id="p-304" data-product-img="assets/images/bakes/donuts-box.jpg" data-product-name="Glazed Donut Box" data-product-price="6.25">
+<div class="product-media">
+<img alt="Box of glazed donuts" loading="lazy" src="assets/images/bakes/donuts-box.jpg"/>
+<span class="product-badge badge-purple">New</span>
+<div class="product-actions">
+<button aria-label="Add to wishlist" class="product-action-btn" data-wishlist="" type="button"><i class="bi bi-heart"></i></button>
+<button aria-label="Add to cart" class="product-action-btn" data-add-to-cart="" type="button"><i class="bi bi-bag-plus"></i></button>
+</div>
+</div>
+<div class="product-body">
+<h3 class="product-title"><a href="product-details.html?slug=glazed-donut-box">Glazed Donut Box</a></h3>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <span class="text-muted-soft">(167)</span></div>
+<p class="product-desc">Six fluffy donuts with a classic vanilla glaze - perfect for sharing.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="product-price">$6.25</span>
+<a class="btn btn-sm btn-grad-soft" href="product-details.html?slug=glazed-donut-box">Details</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6 col-lg-3 reveal reveal-delay-3">
+<div class="product-card" data-category="desserts" data-product="" data-product-id="p-305" data-product-img="assets/images/bakes/choco-strawberries.jpg" data-product-name="Chocolate Berries" data-product-price="5.50">
+<div class="product-media">
+<img alt="Chocolate covered strawberries" loading="lazy" src="assets/images/bakes/choco-strawberries.jpg"/>
+<div class="product-actions">
+<button aria-label="Add to wishlist" class="product-action-btn" data-wishlist="" type="button"><i class="bi bi-heart"></i></button>
+<button aria-label="Add to cart" class="product-action-btn" data-add-to-cart="" type="button"><i class="bi bi-bag-plus"></i></button>
+</div>
+</div>
+<div class="product-body">
+<h3 class="product-title"><a href="product-details.html?slug=chocolate-berries">Chocolate Berries</a></h3>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted-soft">(199)</span></div>
+<p class="product-desc">Plump strawberries dipped in 70% dark chocolate.</p>
+<div class="d-flex justify-content-between align-items-center">
+<span class="product-price">$5.50</span>
+<a class="btn btn-sm btn-grad-soft" href="product-details.html?slug=chocolate-berries">Details</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Seasonal special + countdown ================= -->
+<section class="si-section" id="specials">
+<div class="container">
+<div class="cta-banner" data-countdown="2026-09-30T23:59:59">
+<div class="row align-items-center g-4 position-relative" style="z-index:2">
+<div class="col-lg-6">
+<span class="hero-badge mb-3"><i class="bi bi-sun-fill"></i> Seasonal Special</span>
+<h2 class="display-6 mb-2">Summer Berry Sundae</h2>
+<p class="mb-3 opacity-75">Strawberry gelato, fresh berries, vanilla chantilly and a chocolate wafer. <strong>Half price</strong> when you order any shake!</p>
+<div class="d-flex flex-wrap gap-2 mb-3">
+<span class="btn btn-lg btn-grad" style="pointer-events:none">Now $6.00 <del class="opacity-75" style="font-size:.8em">$12.00</del></span>
+</div>
+<div class="countdown-box justify-content-start">
+<div class="countdown-item"><div class="num cd-days">00</div><div class="lbl">Days</div></div>
+<div class="countdown-item"><div class="num cd-hours">00</div><div class="lbl">Hours</div></div>
+<div class="countdown-item"><div class="num cd-mins">00</div><div class="lbl">Mins</div></div>
+<div class="countdown-item"><div class="num cd-secs">00</div><div class="lbl">Secs</div></div>
+</div>
+<div class="mt-4"><a class="btn btn-lg" href="seasonal-specials.html" style="background:#fff;color:#ff5d8f;font-weight:700">Grab the Deal</a></div>
+</div>
+<div class="col-lg-6 d-none d-lg-flex justify-content-end">
+<img alt="Summer berry sundae" class="rounded-5 si-shadow" src="assets/images/sundaes/sundae-berries.jpg" style="width:min(420px,90%);height:420px;object-fit:cover;border:6px solid rgba(255,255,255,.35)"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Testimonials ================= -->
+<section class="si-section bg-soft" id="testimonials">
+<div class="container">
+<div class="si-section-head text-center mb-5">
+<span class="si-eyebrow"><i class="bi bi-chat-heart"></i> Reviews</span>
+<h2 class="display-5 mt-3 mb-1">Sweet Words From Our Guests</h2>
+<p class="text-muted-soft mb-0">Over 12,000 five-star reviews and counting.</p>
+<div class="si-divider"></div>
+</div>
+<div class="row g-4">
+<div class="col-lg-4 reveal">
+<div class="testimonial-card">
+<i class="bi bi-quote quote-icon"></i>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+<p class="mb-0 text-muted-soft">“The brownie sundae is a religious experience. Hot, cold, fudgy, creamy - I genuinely dream about it. Best dessert parlour in the city, hands down.”</p>
+<div class="d-flex align-items-center gap-3 mt-auto pt-2">
+<img alt="Ava Martinez" class="testimonial-avatar" loading="lazy" src="assets/images/team/team-3.jpg"/>
+<div>
+<strong class="font-display d-block">Ava Martinez</strong>
+<small class="text-muted-soft">Food blogger</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 reveal reveal-delay-1">
+<div class="testimonial-card">
+<i class="bi bi-quote quote-icon"></i>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+<p class="mb-0 text-muted-soft">“Took my kids to the waffle workshop and we had the best afternoon. The staff are pure sunshine and the waffles are golden perfection.”</p>
+<div class="d-flex align-items-center gap-3 mt-auto pt-2">
+<img alt="Daniel Reyes" class="testimonial-avatar" loading="lazy" src="assets/images/team/team-2.jpg"/>
+<div>
+<strong class="font-display d-block">Daniel Reyes</strong>
+<small class="text-muted-soft">Parent of three</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 reveal reveal-delay-2">
+<div class="testimonial-card">
+<i class="bi bi-quote quote-icon"></i>
+<div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+<p class="mb-0 text-muted-soft">“Ordered 40 cups for our office party via the bulk page - delivery was on time, packaging was gorgeous and the strawberry gelato vanished in minutes.”</p>
+<div class="d-flex align-items-center gap-3 mt-auto pt-2">
+<img alt="Priya Nair" class="testimonial-avatar" loading="lazy" src="assets/images/team/team-5.jpg"/>
+<div>
+<strong class="font-display d-block">Priya Nair</strong>
+<small class="text-muted-soft">Office manager</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Celebrations CTA ================= -->
+<section class="si-section pt-0" id="celebrations">
+<div class="container">
+<div class="cta-banner">
+<div class="row align-items-center g-4 position-relative" style="z-index:2">
+<div class="col-lg-6 d-none d-lg-flex justify-content-start">
+<img alt="Birthday celebration at Sugar and Scoop" class="rounded-5 si-shadow" loading="lazy" src="assets/images/events/event-birthday.jpg" style="width:min(420px,90%);height:420px;object-fit:cover;border:6px solid rgba(255,255,255,.35)"/>
+</div>
+<div class="col-lg-6">
+<span class="hero-badge mb-3"><i class="bi bi-balloon-heart"></i> Celebrations</span>
+<h2 class="display-6 mb-2">Birthdays, Weddings &amp; Office Parties</h2>
+<p class="mb-3 opacity-75">Ice cream carts, custom dessert tables and bulk tubs delivered chilled to your venue. Tell us your date and we will handle the sweet stuff.</p>
+<div class="d-flex flex-wrap gap-2 mt-4">
+<a class="btn btn-lg" href="bulk-orders.html" style="background:#fff;color:#ff5d8f;font-weight:700">Plan an Event <i class="bi bi-arrow-right ms-1"></i></a>
+<a class="btn btn-lg" href="contact.html" style="background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35)">Talk to Us</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Instagram gallery ================= -->
+<section class="si-section pt-0" id="instagram">
+<div class="container">
+<div class="si-section-head text-center mb-5">
+<span class="si-eyebrow"><i class="bi bi-instagram"></i> @sugarandscoop</span>
+<h2 class="display-5 mt-3 mb-1">Follow the Sweet Life</h2>
+<p class="text-muted-soft mb-0">Tag us in your scoops for a chance to be featured.</p>
+<div class="si-divider"></div>
+</div>
+<div class="row g-3">
+<div class="col-6 col-md-4 col-lg-2 reveal">
+<a class="gallery-item" href="menu.html" style="height:200px"><img alt="Signature ice cream pop selection" loading="lazy" src="assets/images/ice-cream/pop-flatlay.jpg"/></a>
+</div>
+<div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-1">
+<a class="gallery-item" href="waffles.html" style="height:200px"><img alt="Banana waffle with toffee sauce" loading="lazy" src="assets/images/waffles/waffle-banana.jpg"/></a>
+</div>
+<div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-2">
+<a class="gallery-item" href="milkshakes.html" style="height:200px"><img alt="Strawberry milkshake with whipped cream" loading="lazy" src="assets/images/milkshakes/shake-straw-whip.jpg"/></a>
+</div>
+<div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-3">
+<a class="gallery-item" href="sundaes.html" style="height:200px"><img alt="Sundae topped with fresh berries" loading="lazy" src="assets/images/sundaes/sundae-berries.jpg"/></a>
+</div>
+<div class="col-6 col-md-4 col-lg-2 reveal">
+<a class="gallery-item" href="crepes.html" style="height:200px"><img alt="Crepe folded around ice cream" loading="lazy" src="assets/images/crepes/crepe-icecream.jpg"/></a>
+</div>
+<div class="col-6 col-md-4 col-lg-2 reveal reveal-delay-1">
+<a class="gallery-item" href="seasonal-specials.html" style="height:200px"><img alt="Birthday cake with candles" loading="lazy" src="assets/images/bakes/cake-birthday.jpg"/></a>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Newsletter CTA ================= -->
+<section class="si-section pt-0" id="newsletter">
+<div class="container">
+<div class="cta-banner">
+<div class="row align-items-center g-4 position-relative" style="z-index:2">
+<div class="col-lg-6">
+<h3 class="mb-2">Get 10% Off Your First Order</h3>
+<p class="mb-0 opacity-75">Join the Scoop Club for secret flavours, member-only deals and a free topping every month.</p>
+</div>
+<div class="col-lg-6">
+<form class="newsletter-form d-flex flex-column flex-sm-row gap-2" data-success-message="Welcome to the Scoop Club! Check your inbox for your 10% code." data-validate="">
+<input aria-label="Email address" class="form-control flex-grow-1" placeholder="Your email address" required="" type="email"/>
+<button class="btn btn-lg" style="background:#fff;color:#ff5d8f;font-weight:700" type="submit">Subscribe <i class="bi bi-send ms-1"></i></button>
+</form>
+<small class="d-block mt-2 opacity-75"><i class="bi bi-shield-lock"></i> No spam. Unsubscribe anytime.</small>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= Footer ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-column footer-brand-column">
+        <a class="brand-logo footer-brand-logo" href="index.html">
+          <span class="brand-mark"><i class="bi bi-ice-cream2"></i></span>
+          Sugar &amp; <span class="si-text-gradient">Scoop</span>
+        </a>
+        <p class="footer-description">Handcrafted ice cream, sundaes, waffles, crepes and shakes made fresh daily with real ingredients and real love.</p>
+        <div class="footer-socials" aria-label="Social media">
+          <a aria-label="YouTube (opens in new tab)" class="social-circle" href="https://youtube.com/@sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a aria-label="X / Twitter (opens in new tab)" class="social-circle" href="https://x.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          <a aria-label="Instagram (opens in new tab)" class="social-circle" href="https://instagram.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a aria-label="Facebook (opens in new tab)" class="social-circle" href="https://facebook.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h5>Quick Links</h5>
+        <nav class="footer-links" aria-label="Quick Links">
+          <a class="footer-link" href="about.html">About Us</a>
+          <a class="footer-link" href="menu.html">Services</a>
+          <a class="footer-link" href="pricing.html">Pricing</a>
+          <a class="footer-link" href="blog.html">Blog</a>
+          <a class="footer-link" href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-column">
+        <h5>Our Menu</h5>
+        <nav class="footer-links" aria-label="Our Menu">
+          <a class="footer-link" href="ice-cream.html">Ice Cream</a>
+          <a class="footer-link" href="sundaes.html">Sundaes</a>
+          <a class="footer-link" href="waffles.html">Waffles</a>
+          <a class="footer-link" href="crepes.html">Crepes</a>
+          <a class="footer-link" href="milkshakes.html">Milkshakes</a>
+        </nav>
+      </div>
+
+      <div class="footer-column footer-contact-column">
+        <h5>Get In Touch</h5>
+        <ul class="info-list footer-contact-list mb-3">
+          <li>
+            <span class="info-ic"><i class="bi bi-geo-alt"></i></span>
+            <div><strong class="font-display d-block">Our Address</strong><span>123 Dessert Lane, 5th Avenue, New York, NY 10001</span></div>
+          </li>
+          <li>
+            <span class="info-ic"><i class="bi bi-telephone"></i></span>
+            <div><strong class="font-display d-block">Call Us</strong><span>+1 (555) 234-8765</span></div>
+          </li>
+          <li>
+            <span class="info-ic"><i class="bi bi-envelope"></i></span>
+            <div><strong class="font-display d-block">Email Us</strong><span>hello@sugarandscoop.com</span></div>
+          </li>
+        </ul>
+        <h6 class="footer-subheading font-display mt-3 mb-2">Newsletter</h6>
+        <form class="footer-newsletter-form newsletter-form d-flex gap-2" data-success-message="Thank you for subscribing to Sugar &amp; Scoop!" data-validate="">
+          <input aria-label="Your email address" class="form-control form-control-sm" placeholder="Email address" required="" type="email"/>
+          <button class="btn btn-grad btn-sm px-3" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copyright">&copy; 2026 <strong class="font-display">Sugar &amp; Scoop</strong>. All rights reserved.</div>
+      <div class="footer-legal">
+        <a class="text-muted-soft" data-bs-target="#privacyModal" data-bs-toggle="modal" href="#">Privacy Policy</a>
+        <a class="text-muted-soft" data-bs-target="#termsModal" data-bs-toggle="modal" href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ================= Privacy modal ================= -->
+<div aria-hidden="true" class="modal fade" id="privacyModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-scrollable">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title font-display">Privacy Policy</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p class="small text-muted-soft">Last updated: January 2026</p>
+<p>At Sugar &amp; Scoop we respect your privacy. This policy explains what we collect and how we use it.</p>
+<h6 class="font-display mt-3">Information we collect</h6>
+<p class="text-muted-soft small">We collect the information you give us when ordering, subscribing to our newsletter or contacting us - such as your name, email address, delivery address and order history.</p>
+<h6 class="font-display mt-3">How we use it</h6>
+<p class="text-muted-soft small">We use your information to process orders, deliver desserts, send offers you have opted into, and improve our services. We never sell your data to third parties.</p>
+<h6 class="font-display mt-3">Cookies</h6>
+<p class="text-muted-soft small">We use essential cookies to keep the cart and theme preferences working. Analytics cookies are only used with your consent.</p>
+<h6 class="font-display mt-3">Contact</h6>
+<p class="text-muted-soft small">For any privacy questions, email privacy@sugarandscoop.com or write to 123 Dessert Lane, New York, NY 10001.</p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-grad" data-bs-dismiss="modal" type="button">Got it</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= Terms modal ================= -->
+<div aria-hidden="true" class="modal fade" id="termsModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-scrollable">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title font-display">Terms &amp; Conditions</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<p class="small text-muted-soft">Last updated: January 2026</p>
+<h6 class="font-display mt-3">Orders</h6>
+<p class="text-muted-soft small">All orders are subject to availability. Prices are shown in USD and include applicable taxes unless stated otherwise.</p>
+<h6 class="font-display mt-3">Delivery</h6>
+<p class="text-muted-soft small">We deliver within the city in insulated packaging. Orders over $25 qualify for free delivery. Delivery times are estimates and may vary in peak season.</p>
+<h6 class="font-display mt-3">Allergens</h6>
+<p class="text-muted-soft small">Our parlour handles dairy, nuts, gluten and soy. Please tell our team about any allergies before ordering. Products may contain allergens.</p>
+<h6 class="font-display mt-3">Returns</h6>
+<p class="text-muted-soft small">As our products are perishable, refunds are only offered for incorrect or damaged orders reported within 2 hours of delivery.</p>
+</div>
+<div class="modal-footer">
+<button class="btn btn-grad" data-bs-dismiss="modal" type="button">Got it</button>
+</div>
+</div>
+</div>
+</div>
+<!-- ================= Toast container ================= -->
+<div class="toast-container position-fixed top-0 end-0 p-3"></div>
+<!-- ================= Back to top ================= -->
+<button aria-label="Back to top" class="back-to-top" type="button"><i class="bi bi-arrow-up"></i></button>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
