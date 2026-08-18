@@ -1282,13 +1282,13 @@
 
   /* ---------- Back to top ---------- */
   function initBackToTop() {
-    var btn = $(".back-to-top");
-    if (!btn) return;
-    window.addEventListener("scroll", function () {
-      btn.classList.toggle("show", window.scrollY > 500);
-    }, { passive: true });
-    btn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    var btns = $$(".footer-back-to-top, .back-to-top, #backToTop");
+    if (!btns.length) return;
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
     });
   }
 

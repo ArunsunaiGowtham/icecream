@@ -463,10 +463,10 @@
         </a>
         <p class="footer-description">Handcrafted ice cream, sundaes, waffles, crepes and shakes made fresh daily with real ingredients and real love.</p>
         <div class="footer-socials" aria-label="Social media">
-          <a aria-label="YouTube (opens in new tab)" class="social-circle" href="https://youtube.com/@sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-youtube"></i></a>
-          <a aria-label="X / Twitter (opens in new tab)" class="social-circle" href="https://x.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-twitter-x"></i></a>
-          <a aria-label="Instagram (opens in new tab)" class="social-circle" href="https://instagram.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-instagram"></i></a>
           <a aria-label="Facebook (opens in new tab)" class="social-circle" href="https://facebook.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a aria-label="Instagram (opens in new tab)" class="social-circle" href="https://instagram.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a aria-label="X / Twitter (opens in new tab)" class="social-circle" href="https://x.com/sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-twitter-x"></i></a>
+          <a aria-label="YouTube (opens in new tab)" class="social-circle" href="https://youtube.com/@sugarandscoop" rel="noopener" target="_blank"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
 
@@ -474,10 +474,10 @@
         <h5>Quick Links</h5>
         <nav class="footer-links" aria-label="Quick Links">
           <a class="footer-link" href="about.html">About Us</a>
-          <a class="footer-link" href="menu.html">Services</a>
+          <a class="footer-link" href="menu.html">Menu</a>
           <a class="footer-link" href="pricing.html">Pricing</a>
           <a class="footer-link" href="blog.html">Blog</a>
-          <a class="footer-link" href="contact.html">Contact</a>
+          <a class="footer-link" href="contact.html">Contact Us</a>
         </nav>
       </div>
 
@@ -508,21 +508,29 @@
             <div><strong class="font-display d-block">Email Us</strong><span>hello@sugarandscoop.com</span></div>
           </li>
         </ul>
-        <a class="footer-contact-btn" href="contact.html">Get In Touch <i class="bi bi-arrow-right"></i></a>
-        <h6 class="footer-subheading font-display mt-3 mb-2">Newsletter</h6>
-        <form class="footer-newsletter-form newsletter-form d-flex gap-2" data-success-message="Thank you for subscribing to Sugar &amp; Scoop!" data-validate="">
-          <input aria-label="Your email address" class="form-control form-control-sm" placeholder="Email address" required="" type="email"/>
-          <button class="btn btn-grad btn-sm px-3" type="submit">Subscribe</button>
+        <h6 class="footer-subheading font-display">NEWSLETTER</h6>
+        <form class="footer-newsletter-form newsletter-form" data-success-message="Thank you for subscribing to Sugar &amp; Scoop!" data-validate="">
+          <div class="newsletter-input-group">
+            <input aria-label="Your email address" class="form-control newsletter-input" placeholder="Your email address" required="" type="email"/>
+            <button aria-label="Subscribe" class="newsletter-send-btn" type="submit">
+              <i class="bi bi-send-fill"></i>
+            </button>
+          </div>
         </form>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div class="footer-copyright">&copy; 2026 <strong class="font-display">Sugar &amp; Scoop</strong>. All rights reserved.</div>
-      <div class="footer-legal">
-        <a class="text-muted-soft" data-bs-target="#privacyModal" data-bs-toggle="modal" href="#">Privacy Policy</a>
-        <a class="text-muted-soft" data-bs-target="#termsModal" data-bs-toggle="modal" href="#">Terms &amp; Conditions</a>
+      <div class="footer-bottom-left">
+        <button class="footer-back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">
+          <i class="bi bi-arrow-up"></i>
+        </button>
+        <div class="footer-legal">
+          <a class="footer-legal-link" data-bs-target="#privacyModal" data-bs-toggle="modal" href="#">Privacy Policy</a>
+          <a class="footer-legal-link" data-bs-target="#termsModal" data-bs-toggle="modal" href="#">Terms &amp; Conditions</a>
+        </div>
       </div>
+      <div class="footer-copyright">&copy; 2026 <strong class="font-display">Sugar &amp; Scoop</strong>. All rights reserved.</div>
     </div>
   </div>
 </footer>
@@ -582,7 +590,6 @@
 <!-- ================= Toast container ================= -->
 <div class="toast-container position-fixed top-0 end-0 p-3"></div>
 <!-- ================= Back to top ================= -->
-<button aria-label="Back to top" class="back-to-top" type="button"><i class="bi bi-arrow-up"></i></button>
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
