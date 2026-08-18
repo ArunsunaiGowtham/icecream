@@ -2554,9 +2554,11 @@ html, body { overflow-x: clip; }
 
 .site-footer .footer-newsletter-form {
   display: flex;
+  flex-direction: row;
+  align-items: center;
   gap: 0.5rem;
   width: 100%;
-  max-width: 100%;
+  max-width: 360px;
   margin: 0;
 }
 
@@ -2569,6 +2571,9 @@ html, body { overflow-x: clip; }
   color: var(--si-heading);
   min-width: 0;
   flex: 1 1 auto;
+  width: auto;
+  box-sizing: border-box;
+  display: block;
 }
 .site-footer .footer-newsletter-form .form-control:focus {
   border-color: var(--si-pink);
@@ -2581,7 +2586,8 @@ html, body { overflow-x: clip; }
   padding: 0.45rem 1.15rem;
   border-radius: 100px;
   font-weight: 700;
-  flex-shrink: 0;
+  flex: 0 0 auto;
+  width: auto;
 }
 
 /* Footer Bottom */
@@ -2872,16 +2878,39 @@ html, body { overflow-x: clip; }
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 575.98px) {
   .site-footer .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .site-footer .footer-newsletter-form {
-    flex-direction: column;
+  .site-footer .footer-newsletter-form,
+  .site-footer .footer-newsletter-form.d-flex {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .site-footer .footer-newsletter-form .form-control {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    min-height: 42px;
+    padding: 0.6rem 1rem;
+    border-radius: 100px;
+    box-sizing: border-box;
   }
   .site-footer .footer-newsletter-form .btn {
-    width: 100%;
+    width: 100% !important;
+    min-height: 42px;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -3030,9 +3059,8 @@ html, body { overflow-x: clip; }
 
 /* Mobile full-width form submit buttons */
 @media (max-width: 575.98px) {
-  form button[type="submit"]:not(.btn-sm):not(.search-submit),
-  form input[type="submit"],
-  .newsletter-form .btn {
+  form button[type="submit"]:not(.btn-sm):not(.search-submit):not(.footer-newsletter-form button),
+  form input[type="submit"] {
     width: 100%;
   }
 }
