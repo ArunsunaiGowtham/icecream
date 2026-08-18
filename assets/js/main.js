@@ -186,13 +186,17 @@
       var linkFile = href.split("/").pop();
       var text = (link.textContent || "").trim().toLowerCase();
 
-      if (filename === "home-2.html" && (linkFile === "home-2.html" || text === "home 2")) {
+      if (link.classList.contains("dropdown-toggle")) {
+        if (isHome) {
+          link.classList.add("active");
+        }
+      } else if (filename === "home-2.html" && (linkFile === "home-2.html" || text === "home 2")) {
         link.classList.add("active");
-      } else if ((filename === "index.html" || !filename) && (linkFile === "index.html" || text === "home 1" || text === "home")) {
+      } else if ((filename === "index.html" || !filename) && (linkFile === "index.html" || text === "home 1")) {
         link.classList.add("active");
       } else if (isAbout && (linkFile === "about.html" || text === "about")) {
         link.classList.add("active");
-      } else if (isMenu && (linkFile === "menu.html" || text.indexOf("menu") !== -1)) {
+      } else if (isMenu && (linkFile === "menu.html" || text === "full menu" || text.indexOf("menu") !== -1)) {
         link.classList.add("active");
       } else if (isPricing && (linkFile === "pricing.html" || text === "pricing")) {
         link.classList.add("active");
@@ -213,7 +217,7 @@
     allNavLinks.forEach(function (link) {
       link.addEventListener("click", function () {
         var href = link.getAttribute("href");
-        if (!href || href === "#") return;
+        if (!href || href === "#" || href.indexOf("#") === 0) return;
         setActiveNavByTarget(href);
       });
     });
