@@ -495,6 +495,86 @@
   function initCheckoutForm() {
     var form = $("#checkoutForm");
     if (!form) return;
+
+    // Payment method toggling
+    var paymentRadios = $$('input[name="paymentMethod"]', form);
+    var cardFields = $("#cardPaymentFields");
+    var cardNameInput = $("#coCardName");
+    var cardNumberInput = $("#coCardNumber");
+    var cardExpiryInput = $("#coCardExpiry");
+    var cardCvvInput = $("#coCardCvv");
+    var cardBrandIcon = $("#cardBrandIcon");
+
+    function updatePaymentMethodState() {
+      var selected = $('input[name="paymentMethod"]:checked', form);
+      var isCard = selected && selected.value === "card";
+      if (cardFields) {
+        cardFields.style.display = isCard ? "block" : "none";
+      }
+      if (!isCard) {
+        [cardNameInput, cardNumberInput, cardExpiryInput, cardCvvInput].forEach(function (inp) {
+          if (inp) inp.classList.remove("is-invalid");
+        });
+      }
+    }
+
+    paymentRadios.forEach(function (radio) {
+      radio.addEventListener("change", updatePaymentMethodState);
+    });
+    updatePaymentMethodState();
+
+    // Card Number Formatter & Brand Detector
+    if (cardNumberInput) {
+      cardNumberInput.addEventListener("input", function () {
+        var val = this.value.replace(/\D/g, "").slice(0, 16);
+        var matches = val.match(/.{1,4}/g);
+        this.value = matches ? matches.join(" ") : val;
+        this.classList.remove("is-invalid");
+
+        if (cardBrandIcon) {
+          if (/^4/.test(val)) {
+            cardBrandIcon.innerHTML = '<span class="badge bg-primary px-2 py-1 small fw-bold">VISA</span>';
+          } else if (/^(5[1-5]|2[2-7])/.test(val)) {
+            cardBrandIcon.innerHTML = '<span class="badge bg-danger px-2 py-1 small fw-bold">MC</span>';
+          } else if (/^3[47]/.test(val)) {
+            cardBrandIcon.innerHTML = '<span class="badge bg-info text-dark px-2 py-1 small fw-bold">AMEX</span>';
+          } else {
+            cardBrandIcon.innerHTML = '<i class="bi bi-credit-card"></i>';
+          }
+        }
+      });
+    }
+
+    // Expiry Formatter (MM/YY)
+    if (cardExpiryInput) {
+      cardExpiryInput.addEventListener("input", function () {
+        var val = this.value.replace(/\D/g, "").slice(0, 4);
+        if (val.length >= 2) {
+          var month = parseInt(val.slice(0, 2), 10);
+          if (month > 12) val = "12" + val.slice(2);
+          else if (month === 0) val = "01" + val.slice(2);
+          this.value = val.slice(0, 2) + "/" + val.slice(2);
+        } else {
+          this.value = val;
+        }
+        this.classList.remove("is-invalid");
+      });
+    }
+
+    // CVV Formatter (digits only, max 4)
+    if (cardCvvInput) {
+      cardCvvInput.addEventListener("input", function () {
+        this.value = this.value.replace(/\D/g, "").slice(0, 4);
+        this.classList.remove("is-invalid");
+      });
+    }
+
+    if (cardNameInput) {
+      cardNameInput.addEventListener("input", function () {
+        this.classList.remove("is-invalid");
+      });
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var items = getCart();
@@ -513,6 +593,64 @@
         showToast("Please fill in all required delivery fields.", "error");
         return;
       }
+
+      var selectedPm = $('input[name="paymentMethod"]:checked', form);
+      var isCard = selectedPm && selectedPm.value === "card";
+
+      if (isCard) {
+        var hasCardError = false;
+        var rawCardNumber = cardNumberInput ? cardNumberInput.value.replace(/\D/g, "") : "";
+        var rawExpiry = cardExpiryInput ? cardExpiryInput.value.trim() : "";
+        var rawCvv = cardCvvInput ? cardCvvInput.value.trim() : "";
+        var rawName = cardNameInput ? cardNameInput.value.trim() : "";
+
+        if (!rawName || rawName.length < 2) {
+          if (cardNameInput) cardNameInput.classList.add("is-invalid");
+          hasCardError = true;
+        } else {
+          if (cardNameInput) cardNameInput.classList.remove("is-invalid");
+        }
+
+        if (!rawCardNumber || rawCardNumber.length < 13 || rawCardNumber.length > 19) {
+          if (cardNumberInput) cardNumberInput.classList.add("is-invalid");
+          hasCardError = true;
+        } else {
+          if (cardNumberInput) cardNumberInput.classList.remove("is-invalid");
+        }
+
+        var expiryMatch = rawExpiry.match(/^(0[1-9]|1[0-2])\/([0-9]{2})$/);
+        if (!expiryMatch) {
+          if (cardExpiryInput) cardExpiryInput.classList.add("is-invalid");
+          hasCardError = true;
+        } else {
+          var expMonth = parseInt(expiryMatch[1], 10);
+          var expYear = 2000 + parseInt(expiryMatch[2], 10);
+          var now = new Date();
+          var currentYear = now.getFullYear();
+          var currentMonth = now.getMonth() + 1;
+          if (expYear < currentYear || (expYear === currentYear && expMonth < currentMonth)) {
+            if (cardExpiryInput) cardExpiryInput.classList.add("is-invalid");
+            hasCardError = true;
+          } else {
+            if (cardExpiryInput) cardExpiryInput.classList.remove("is-invalid");
+          }
+        }
+
+        if (!rawCvv || rawCvv.length < 3 || rawCvv.length > 4) {
+          if (cardCvvInput) cardCvvInput.classList.add("is-invalid");
+          hasCardError = true;
+        } else {
+          if (cardCvvInput) cardCvvInput.classList.remove("is-invalid");
+        }
+
+        if (hasCardError) {
+          showToast("Please enter valid card payment details.", "error");
+          var firstInvalid = cardFields ? cardFields.querySelector(".is-invalid") : null;
+          if (firstInvalid) firstInvalid.focus();
+          return;
+        }
+      }
+
       var btn = $("#btnPlaceOrder");
       var origText = btn ? btn.innerHTML : "";
       if (btn) {
@@ -529,12 +667,16 @@
         }
         var activeState = $("#checkoutActiveState");
         if (activeState) {
+          var paymentMethodLabel = "Credit / Debit Card";
+          if (selectedPm && selectedPm.value === "cash") paymentMethodLabel = "Cash on Delivery";
+          if (selectedPm && selectedPm.value === "digital") paymentMethodLabel = "Apple Pay / Google Pay";
+
           activeState.innerHTML =
             '<div class="text-center py-5"><div class="si-card p-5 mx-auto" style="max-width:560px">' +
             '<i class="bi bi-check-circle-fill text-success" style="font-size:4rem"></i>' +
             '<h2 class="font-display mt-3 mb-2">Order Confirmed!</h2>' +
             '<p class="text-muted-soft mb-3">Thank you for your order, ' + escapeHtml(fullName.value.trim()) + '! We have received your request and our dessert artisans are already preparing your fresh treats.</p>' +
-            '<div class="alert alert-soft p-3 mb-4 text-start small"><strong>Delivery Details:</strong><br>' + escapeHtml(address.value.trim()) + ', ' + escapeHtml(city.value.trim()) + ' ' + escapeHtml(zip.value.trim()) + '<br>Contact: ' + escapeHtml(phone.value.trim()) + '</div>' +
+            '<div class="alert alert-soft p-3 mb-4 text-start small"><strong>Delivery Details:</strong><br>' + escapeHtml(address.value.trim()) + ', ' + escapeHtml(city.value.trim()) + ' ' + escapeHtml(zip.value.trim()) + '<br>Contact: ' + escapeHtml(phone.value.trim()) + '<br>Payment: ' + paymentMethodLabel + '</div>' +
             '<a href="menu.html" class="btn btn-grad btn-lg">Back to Menu</a>' +
             '</div></div>';
         }

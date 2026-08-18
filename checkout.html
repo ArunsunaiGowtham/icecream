@@ -131,7 +131,7 @@
 </div>
 <!-- ================= Page header ================= -->
 <section class="page-header">
-<div class="container">
+<div class="container text-center">
 <nav aria-label="breadcrumb">
 <ol class="breadcrumb">
 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -204,19 +204,87 @@
 </div>
 <hr class="my-4"/>
 <h4 class="font-display fw-bold mb-3"><i class="bi bi-credit-card-fill text-purple me-2"></i>2. Payment Method</h4>
-<div class="d-flex flex-column gap-2 mb-4">
-<div class="form-check p-3 rounded-3 border bg-surface">
-<input checked="" class="form-check-input ms-0 me-3" id="pmCard" name="paymentMethod" type="radio" value="card"/>
-<label class="form-check-label fw-bold" for="pmCard">Credit / Debit Card (Visa, Mastercard, Amex)</label>
-</div>
-<div class="form-check p-3 rounded-3 border bg-surface">
-<input class="form-check-input ms-0 me-3" id="pmCash" name="paymentMethod" type="radio" value="cash"/>
-<label class="form-check-label fw-bold" for="pmCash">Cash on Delivery / Pickup</label>
-</div>
-<div class="form-check p-3 rounded-3 border bg-surface">
-<input class="form-check-input ms-0 me-3" id="pmDigital" name="paymentMethod" type="radio" value="digital"/>
-<label class="form-check-label fw-bold" for="pmDigital">Apple Pay / Google Pay</label>
-</div>
+<div class="d-flex flex-column gap-3 mb-4">
+  <!-- Option 1: Credit / Debit Card -->
+  <div class="payment-method-card rounded-4 border bg-surface p-3 transition-all" id="pmCardContainer">
+    <div class="form-check d-flex align-items-center justify-content-between p-0 m-0">
+      <div class="d-flex align-items-center">
+        <input checked="" class="form-check-input ms-0 me-3 mt-0" id="pmCard" name="paymentMethod" type="radio" value="card"/>
+        <label class="form-check-label fw-bold mb-0 cursor-pointer" for="pmCard">Credit / Debit Card (Visa, Mastercard, Amex)</label>
+      </div>
+      <div class="payment-card-badges d-flex align-items-center gap-1 text-muted-soft">
+        <i class="bi bi-credit-card-2-front fs-5 text-purple"></i>
+      </div>
+    </div>
+
+    <!-- Collapsible Card Details Form -->
+    <div class="card-details-fields mt-3 pt-3 border-top" id="cardPaymentFields">
+      <div class="row g-3">
+        <div class="col-12">
+          <label class="form-label small fw-bold mb-1" for="coCardName">Cardholder Name <span class="text-danger">*</span></label>
+          <div class="position-relative">
+            <input autocomplete="cc-name" class="form-control" id="coCardName" name="cardName" placeholder="Enter cardholder name" type="text"/>
+            <div class="invalid-feedback" id="coCardNameFeedback">Please enter the cardholder name.</div>
+          </div>
+        </div>
+        <div class="col-12">
+          <label class="form-label small fw-bold mb-1" for="coCardNumber">Card Number <span class="text-danger">*</span></label>
+          <div class="position-relative">
+            <input autocomplete="cc-number" class="form-control font-monospace pe-5" id="coCardNumber" inputmode="numeric" maxlength="19" name="cardNumber" placeholder="1234 5678 9012 3456" type="text"/>
+            <span class="card-brand-icon position-absolute end-0 top-50 translate-middle-y me-3 text-muted-soft pointer-events-none" id="cardBrandIcon">
+              <i class="bi bi-credit-card"></i>
+            </span>
+            <div class="invalid-feedback" id="coCardNumberFeedback">Please enter a valid 16-digit card number.</div>
+          </div>
+        </div>
+        <div class="col-md-6 col-6">
+          <label class="form-label small fw-bold mb-1" for="coCardExpiry">Expiry Date (MM/YY) <span class="text-danger">*</span></label>
+          <input autocomplete="cc-exp" class="form-control font-monospace text-center" id="coCardExpiry" inputmode="numeric" maxlength="5" name="cardExpiry" placeholder="MM/YY" type="text"/>
+          <div class="invalid-feedback" id="coCardExpiryFeedback">Please enter valid expiry (MM/YY).</div>
+        </div>
+        <div class="col-md-6 col-6">
+          <label class="form-label small fw-bold mb-1" for="coCardCvv">CVV <span class="text-danger">*</span></label>
+          <div class="position-relative">
+            <input autocomplete="cc-csc" class="form-control font-monospace text-center pe-4" id="coCardCvv" inputmode="numeric" maxlength="4" name="cardCvv" placeholder="CVV" type="password"/>
+            <span class="cvv-hint-icon position-absolute end-0 top-50 translate-middle-y me-2 text-muted-soft" title="3 or 4-digit security code on your card">
+              <i class="bi bi-lock"></i>
+            </span>
+            <div class="invalid-feedback" id="coCardCvvFeedback">Please enter valid 3-4 digit CVV.</div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2 mt-3 pt-2 text-muted-soft small opacity-75">
+        <i class="bi bi-shield-lock-fill text-success fs-6"></i>
+        <span>256-bit encrypted secure payment simulation. No card data is stored.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 2: Cash on Delivery / Pickup -->
+  <div class="payment-method-card rounded-4 border bg-surface p-3 transition-all" id="pmCashContainer">
+    <div class="form-check d-flex align-items-center justify-content-between p-0 m-0">
+      <div class="d-flex align-items-center">
+        <input class="form-check-input ms-0 me-3 mt-0" id="pmCash" name="paymentMethod" type="radio" value="cash"/>
+        <label class="form-check-label fw-bold mb-0 cursor-pointer" for="pmCash">Cash on Delivery / Pickup</label>
+      </div>
+      <div class="text-muted-soft">
+        <i class="bi bi-cash-coin fs-5 text-success"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 3: Apple Pay / Google Pay -->
+  <div class="payment-method-card rounded-4 border bg-surface p-3 transition-all" id="pmDigitalContainer">
+    <div class="form-check d-flex align-items-center justify-content-between p-0 m-0">
+      <div class="d-flex align-items-center">
+        <input class="form-check-input ms-0 me-3 mt-0" id="pmDigital" name="paymentMethod" type="radio" value="digital"/>
+        <label class="form-check-label fw-bold mb-0 cursor-pointer" for="pmDigital">Apple Pay / Google Pay</label>
+      </div>
+      <div class="text-muted-soft">
+        <i class="bi bi-wallet2 fs-5 text-peach"></i>
+      </div>
+    </div>
+  </div>
 </div>
 <button class="btn btn-grad btn-lg w-100" id="btnPlaceOrder" type="submit">Place Order <i class="bi bi-check-circle-fill ms-1"></i></button>
 </form>
