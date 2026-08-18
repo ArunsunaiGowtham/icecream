@@ -586,6 +586,60 @@ img { max-width: 100%; }
   box-shadow: 0 4px 12px -2px rgba(255, 93, 143, 0.5);
 }
 
+/* ---------- Navbar Responsive Refinements ---------- */
+@media (max-width: 575.98px) {
+  .site-header .nav-dir-btn {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-header .navbar-nav {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+  .site-header .navbar-collapse {
+    flex-grow: 1;
+    justify-content: center;
+  }
+  .site-header .header-actions {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .site-header .brand-logo {
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar .nav-link {
+    padding: 0.5rem 0.65rem !important;
+    font-size: 0.95rem;
+  }
+  .header-actions {
+    gap: 0.35rem;
+  }
+  .header-actions .nav-order-btn {
+    padding: 0 1rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* Offcanvas mobile menu scrollability & layout */
+#mobileMenu.offcanvas {
+  max-width: 360px;
+  width: 85vw;
+}
+#mobileMenu .offcanvas-body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+}
+#mobileMenu .offcanvas-body > ul.nav {
+  flex-grow: 1;
+}
+
 /* ---------- Hero Component (Centered) ---------- */
 .hero {
   position: relative;
