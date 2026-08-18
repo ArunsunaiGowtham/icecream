@@ -196,7 +196,7 @@
         link.classList.add("active");
       } else if (isAbout && (linkFile === "about.html" || text === "about")) {
         link.classList.add("active");
-      } else if (isMenu && (linkFile === "menu.html" || text === "full menu" || text.indexOf("menu") !== -1)) {
+      } else if (isMenu && (linkFile === "menu.html" || text === "menu")) {
         link.classList.add("active");
       } else if (isPricing && (linkFile === "pricing.html" || text === "pricing")) {
         link.classList.add("active");
