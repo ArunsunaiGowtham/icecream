@@ -43,21 +43,48 @@
     document.documentElement.setAttribute("lang", isRtl ? "ar" : "en");
     var link = document.getElementById("mainBootstrapCss");
     if (link) {
-      link.setAttribute("href", isRtl ? "assets/css/bootstrap.rtl.min.css" : "assets/css/bootstrap.min.css");
+      var currentHref = link.getAttribute("href") || "";
+      var prefix = currentHref.indexOf("../") === 0 ? "../" : "";
+      link.setAttribute("href", prefix + (isRtl ? "assets/css/bootstrap.rtl.min.css" : "assets/css/bootstrap.min.css"));
     }
     try {
       localStorage.setItem("si_dir", finalDir);
       localStorage.setItem("layoutDirection", finalDir);
     } catch (e) {}
+
+    // Update all toggle pill switches
     $$("[data-dir-switch]").forEach(function (btn) {
+      var ltrOpt = btn.querySelector(".dir-opt-ltr");
+      var rtlOpt = btn.querySelector(".dir-opt-rtl");
+      if (ltrOpt && rtlOpt) {
+        if (isRtl) {
+          ltrOpt.classList.remove("active");
+          rtlOpt.classList.add("active");
+        } else {
+          ltrOpt.classList.add("active");
+          rtlOpt.classList.remove("active");
+        }
+      }
       var icon = btn.querySelector("i");
       if (icon) {
         icon.className = isRtl ? "bi bi-text-left" : "bi bi-text-right";
       }
-      btn.setAttribute("aria-label", isRtl ? "Switch to left-to-right layout" : "Switch to right-to-left layout");
+      btn.setAttribute("aria-label", isRtl ? "Current layout is RTL. Switch to LTR" : "Current layout is LTR. Switch to RTL");
       btn.setAttribute("title", isRtl ? "Switch to LTR" : "Switch to RTL");
+      btn.classList.toggle("is-rtl", isRtl);
+    });
+
+    // Update any explicit direction buttons (e.g. inside mobile menu drawer)
+    $$("[data-dir-set]").forEach(function (btn) {
+      var targetDir = btn.getAttribute("data-dir-set");
+      if (targetDir === finalDir) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
     });
   }
+
   function initDirection() {
     var saved = null;
     try {
@@ -65,11 +92,22 @@
     } catch (e) {}
     var initial = (saved === "rtl" || document.documentElement.getAttribute("dir") === "rtl") ? "rtl" : "ltr";
     setDirection(initial);
+
     $$("[data-dir-switch]").forEach(function (btn) {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
         var current = document.documentElement.getAttribute("dir") === "rtl" ? "rtl" : "ltr";
         setDirection(current === "rtl" ? "ltr" : "rtl");
+      });
+    });
+
+    $$("[data-dir-set]").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        var targetDir = btn.getAttribute("data-dir-set");
+        if (targetDir) {
+          setDirection(targetDir);
+        }
       });
     });
   }
