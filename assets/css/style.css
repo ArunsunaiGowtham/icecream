@@ -1394,7 +1394,28 @@ img { max-width: 100%; }
   padding: 0.3rem 0.85rem; border-radius: 100px;
 }
 [dir="rtl"] .blog-cat { left: auto; right: 1rem; }
-.blog-body { padding: 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+.blog-body {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex: 1;
+}
+
+/* Center-align Read More buttons in all blog cards */
+.blog-card .btn,
+.blog-body .btn,
+.blog-card .btn-grad,
+.blog-card .btn-grad-soft {
+  align-self: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: auto !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Blog grid: one consistent layout for every filter/search state */
 #blogGrid.blog-grid {
   display: grid;
