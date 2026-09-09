@@ -4515,3 +4515,10 @@ html, body { overflow-x: clip; }
     border-radius: 1.25rem;
   }
 }
+
+/* Hide story inset milkshake image on laptop / desktop viewports (>= 992px) */
+@media (min-width: 992px) {
+  .story-media .story-inset {
+    display: none !important;
+  }
+}
