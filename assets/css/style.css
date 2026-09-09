@@ -1816,6 +1816,46 @@ img { max-width: 100%; }
   }
 }
 
+/* ---------- Home Celebration Section Spacing Alignment ---------- */
+#testimonials {
+  padding-bottom: 2.5rem !important;
+}
+
+#celebrations {
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+#instagram {
+  padding-top: 2.5rem !important;
+}
+
+@media (max-width: 991.98px) {
+  #testimonials {
+    padding-bottom: 2rem !important;
+  }
+  #celebrations {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  #instagram {
+    padding-top: 2rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #testimonials {
+    padding-bottom: 1.5rem !important;
+  }
+  #celebrations {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+  #instagram {
+    padding-top: 1.5rem !important;
+  }
+}
+
 .social-circle {
   width: 38px; height: 38px; border-radius: 50%;
   border: 1px solid var(--si-border);
