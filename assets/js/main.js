@@ -1548,14 +1548,40 @@
     });
   }
 
-document.addEventListener("DOMContentLoaded", function () {
+  /* ---------- Home 2: Rainbow category filter ---------- */
+  function initRainbowFilters() {
+    var pills = $$("#rainbow .filter-pills [data-category]");
+    var items = $$("#rainbowCategoryGrid [data-category-item]");
+    if (!pills.length || !items.length) return;
+
+    pills.forEach(function (pill) {
+      pill.addEventListener("click", function (e) {
+        e.preventDefault();
+        var cat = pill.getAttribute("data-category");
+        pills.forEach(function (p) { p.classList.remove("active"); });
+        pill.classList.add("active");
+
+        items.forEach(function (item) {
+          var itemCat = item.getAttribute("data-category-item");
+          if (cat === "all" || itemCat === cat) {
+            item.style.display = "";
+            item.classList.add("revealed");
+          } else {
+            item.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
     initProductCardNavigation();
     initBlogCardNavigation();
     initTheme();
     initDirection();
     initNavbar();
     initHeroSlider();
-    
+    initRainbowFilters();
     initCart();
     initQty();
     initProductView();

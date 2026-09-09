@@ -170,74 +170,86 @@
 <div class="si-section-head text-center mb-5">
 <span class="si-eyebrow"><i class="bi bi-rainbow"></i> Pick a Craving</span>
 <h2 class="display-5 mt-3 mb-1">Taste the Rainbow</h2>
-<p class="text-muted-soft mb-0">Six ways to make today sweeter - take your pick.</p>
+<p class="text-muted-soft mb-0">Six vibrant handcrafted categories, churned fresh and baked daily in our parlour.</p>
 <div class="si-divider"></div>
 </div>
 <div class="filter-pills mb-5">
-<a class="filter-pill active" href="ice-cream.html">Ice Cream</a>
-<a class="filter-pill" href="sundaes.html">Sundaes</a>
-<a class="filter-pill" href="waffles.html">Waffles</a>
-<a class="filter-pill" href="crepes.html">Crepes</a>
-<a class="filter-pill" href="milkshakes.html">Milkshakes</a>
-<a class="filter-pill" href="menu.html">Bakes &amp; More</a>
+<button class="filter-pill active" data-category="all" type="button">All Categories</button>
+<button class="filter-pill" data-category="ice-cream" type="button"><i class="bi bi-cone-striped me-1"></i> Ice Cream</button>
+<button class="filter-pill" data-category="sundaes" type="button"><i class="bi bi-cup-straw me-1"></i> Sundaes</button>
+<button class="filter-pill" data-category="waffles" type="button"><i class="bi bi-grid-3x3 me-1"></i> Waffles</button>
+<button class="filter-pill" data-category="crepes" type="button"><i class="bi bi-egg-fried me-1"></i> Crepes</button>
+<button class="filter-pill" data-category="milkshakes" type="button"><i class="bi bi-cup me-1"></i> Milkshakes</button>
+<button class="filter-pill" data-category="bakes" type="button"><i class="bi bi-cake2 me-1"></i> Bakes &amp; More</button>
 </div>
-<div class="row g-4">
-<div class="col-sm-6 col-lg-4 reveal">
+<div class="row g-4" id="rainbowCategoryGrid">
+<!-- 1. Ice Cream -->
+<div class="col-sm-6 col-lg-4 reveal" data-category-item="ice-cream">
 <a class="deal-card d-block" href="ice-cream.html">
 <img alt="Two strawberry ice cream cones" class="deal-bg" loading="lazy" src="assets/images/ice-cream/cone-strawberry.jpg"/>
 <div class="deal-body">
 <h4 class="mb-1">Ice Cream</h4>
-<p class="mb-2 small opacity-75">25+ handcrafted scoops &amp; cones</p>
+<p class="mb-2 small">25+ handcrafted scoops &amp; cones</p>
 <span class="btn btn-sm btn-grad">Shop Now</span>
 </div>
 </a>
 </div>
-<div class="col-sm-6 col-lg-4 reveal reveal-delay-1">
+
+<!-- 2. Sundaes -->
+<div class="col-sm-6 col-lg-4 reveal reveal-delay-1" data-category-item="sundaes">
 <a class="deal-card d-block" href="sundaes.html">
-<img alt="Brownie sundae" class="deal-bg" loading="lazy" src="assets/images/sundaes/sundae-brownie.jpg"/>
+<img alt="Artisan pink sundae" class="deal-bg" loading="lazy" src="assets/images/sundaes/sundae-pink.jpg"/>
 <div class="deal-body">
 <h4 class="mb-1">Sundaes</h4>
-<p class="mb-2 small opacity-75">Layered, loaded &amp; legendary</p>
+<p class="mb-2 small">Layered, loaded &amp; legendary</p>
 <span class="btn btn-sm btn-grad">Shop Now</span>
 </div>
 </a>
 </div>
-<div class="col-sm-6 col-lg-4 reveal reveal-delay-2">
+
+<!-- 3. Waffles -->
+<div class="col-sm-6 col-lg-4 reveal reveal-delay-2" data-category-item="waffles">
 <a class="deal-card d-block" href="waffles.html">
-<img alt="Strawberry waffles" class="deal-bg" loading="lazy" src="assets/images/waffles/waffle-strawberry.jpg"/>
+<img alt="Golden Belgian waffle" class="deal-bg" loading="lazy" src="assets/images/waffles/waffle-top.jpg"/>
 <div class="deal-body">
 <h4 class="mb-1">Waffles</h4>
-<p class="mb-2 small opacity-75">Golden, crisp &amp; stack-worthy</p>
+<p class="mb-2 small">Golden, crisp &amp; stack-worthy</p>
 <span class="btn btn-sm btn-grad">Shop Now</span>
 </div>
 </a>
 </div>
-<div class="col-sm-6 col-lg-4 reveal">
+
+<!-- 4. Crepes -->
+<div class="col-sm-6 col-lg-4 reveal" data-category-item="crepes">
 <a class="deal-card d-block" href="crepes.html">
 <img alt="Crepe with ice cream" class="deal-bg" loading="lazy" src="assets/images/crepes/crepe-icecream.jpg"/>
 <div class="deal-body">
 <h4 class="mb-1">Crepes</h4>
-<p class="mb-2 small opacity-75">Delicate, buttery &amp; folded fresh</p>
+<p class="mb-2 small">Delicate, buttery &amp; folded fresh</p>
 <span class="btn btn-sm btn-grad">Shop Now</span>
 </div>
 </a>
 </div>
-<div class="col-sm-6 col-lg-4 reveal reveal-delay-1">
+
+<!-- 5. Milkshakes -->
+<div class="col-sm-6 col-lg-4 reveal reveal-delay-1" data-category-item="milkshakes">
 <a class="deal-card d-block" href="milkshakes.html">
 <img alt="Strawberry milkshake with whipped cream" class="deal-bg" loading="lazy" src="assets/images/milkshakes/shake-straw-whip.jpg"/>
 <div class="deal-body">
 <h4 class="mb-1">Milkshakes</h4>
-<p class="mb-2 small opacity-75">Thick, creamy &amp; over-the-top</p>
+<p class="mb-2 small">Thick, creamy &amp; over-the-top</p>
 <span class="btn btn-sm btn-grad">Shop Now</span>
 </div>
 </a>
 </div>
-<div class="col-sm-6 col-lg-4 reveal reveal-delay-2">
+
+<!-- 6. Bakes & More -->
+<div class="col-sm-6 col-lg-4 reveal reveal-delay-2" data-category-item="bakes">
 <a class="deal-card d-block" href="menu.html">
-<img alt="Berry topped cake and bakes" class="deal-bg" loading="lazy" src="assets/images/bakes/cake-berries.jpg"/>
+<img alt="Fresh berry cake slice" class="deal-bg" loading="lazy" src="assets/images/bakes/cake-berries.jpg"/>
 <div class="deal-body">
 <h4 class="mb-1">Bakes &amp; More</h4>
-<p class="mb-2 small opacity-75">Cakes, cookies &amp; warm desserts</p>
+<p class="mb-2 small">Cakes, cookies &amp; warm desserts</p>
 <span class="btn btn-sm btn-grad">Shop Now</span>
 </div>
 </a>
