@@ -192,7 +192,7 @@ img { max-width: 100%; }
 
 .si-gap-3 { gap: 1rem; }
 
-/* ---------- Buttons ---------- */
+/* ---------- Buttons & CTA Text Center Alignment ---------- */
 .btn {
   font-family: var(--si-font-display);
   font-weight: 700;
@@ -200,9 +200,22 @@ img { max-width: 100%; }
   border-radius: 100px;
   padding: 0.72rem 1.6rem;
   transition: all 0.25s ease;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  vertical-align: middle;
+  line-height: 1 !important;
 }
-.btn-lg { padding: 0.95rem 2.2rem; font-size: 1.05rem; }
-.btn-sm { padding: 0.45rem 1rem; font-size: 0.9rem; }
+.btn-lg { padding: 0.95rem 2.2rem; font-size: 1.05rem; line-height: 1 !important; }
+.btn-sm { padding: 0.48rem 1.15rem 0.44rem; font-size: 0.9rem; line-height: 1 !important; min-height: 36px; }
+
+.btn i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
 
 .btn-grad {
   background: var(--si-gradient);
@@ -3886,10 +3899,13 @@ html, body { overflow-x: clip; }
   min-height: 38px;
 }
 @media (min-width: 576px) {
-  .btn,
+  .btn:not(.btn-sm),
   .form-control,
   .form-select {
     min-height: 44px;
+  }
+  .btn-sm {
+    min-height: 36px;
   }
 }
 
