@@ -236,7 +236,15 @@ img { max-width: 100%; }
   border: 1px solid var(--si-border);
 }
 [data-bs-theme="dark"] .btn-grad-soft { background: #332546; color: #ff9fbe; border-color: #3b2b55; }
-.btn-grad-soft:hover { transform: translateY(-2px); }
+.btn-grad-soft:hover,
+.btn-grad-soft:focus-visible {
+  color: var(--si-pink);
+  transform: translateY(-2px);
+}
+[data-bs-theme="dark"] .btn-grad-soft:hover,
+[data-bs-theme="dark"] .btn-grad-soft:focus-visible {
+  color: #ff9fbe;
+}
 
 .btn-outline-scoop {
   border: 2px solid var(--si-pink);
